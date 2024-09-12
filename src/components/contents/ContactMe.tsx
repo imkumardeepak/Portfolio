@@ -90,7 +90,7 @@ const ContactMe = () => {
                                 Email
                             </h6>
                             <p className="mt-2 text-base text-neutral-300">
-                                sihasaneshreyas@gmail.com
+                                amikumardeepak@gmail.com
                             </p>
                         </Button>
                     </Link>
@@ -100,7 +100,7 @@ const ContactMe = () => {
                                 Phone
                             </h6>
                             <p className="mt-2 text-base text-neutral-300">
-                                +91 932 235 63 92
+                                +91 8409671140
                             </p>
                         </Button>
                     </Link>
