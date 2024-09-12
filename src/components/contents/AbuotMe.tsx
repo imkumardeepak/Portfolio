@@ -10,8 +10,9 @@ const AbuotMe = () => {
             </h2>
 
             <p className='w-full text-base font-normal leading-7 text-justify text-neutral-200'>
-                I am currently on a thrilling journey pursuing my B.Tech degree in <strong>Mechanical Engineering</strong>. Beyond the world of gears and machines, I craft engaging and responsive web applications using <strong>React</strong> and delve into the realm of mobile app development with <strong>React Native</strong>. Apart from coding, I express my creative side by designing sleek interfaces using <strong>Figma</strong>. Let&apos;s build something amazing together! ✨
-            </p>
+    As a highly motivated full-stack developer with a strong foundation in <strong>.NET Core</strong>, <strong>React.js</strong>, and <strong>Python</strong>, I specialize in crafting efficient web and Windows applications. Alongside my expertise in data engineering and machine learning, I bring a problem-solving mindset to building complex systems across diverse platforms. While pursuing a B.Tech in <strong>Mechanical Engineering</strong>, I also create responsive, full-stack web applications and mobile apps using <strong>React Native</strong>, and design sleek interfaces with <strong>Figma</strong>. Let's build something amazing together! ✨
+</p>
+
 
         </AnimationContainer>
     )

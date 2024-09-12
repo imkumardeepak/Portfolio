@@ -13,12 +13,13 @@ const MySkills = () => {
             </div>
 
             <p className='mb-4 text-justify lg:leading-7 text-neutral-200 lg:text-start'>
-                A creative problem solver with over 2 years of programming experience, I&apos;ve explored diverse programming languages, libraries, and technology stacks, honing my skills in both Frontend, Backend, and App development.
-            </p>
+    With over 3+ years of programming experience, I am a versatile developer skilled in both frontend and backend technologies, as well as app development. My expertise spans a range of languages and frameworks including .NET Core, React.js, TypeScript, and Node.js. I have a proven track record of developing and integrating complex systems and solutions.
+        </p>
 
-            <p className='text-justify lg:leading-7 text-neutral-200 lg:text-start'>
-                Eager to learn and adept at adopting new technologies, I thrive on expanding my skill set in the ever-evolving tech landscape.
-            </p>
+        <p className='text-justify lg:leading-7 text-neutral-200 lg:text-start'>
+            I am passionate about learning and continuously expanding my skill set in the ever-evolving tech landscape. My ability to adapt to new technologies and solve creative problems drives me to deliver high-quality, impactful solutions.
+        </p>
+
 
             <div className="flex flex-col items-start mt-8">
                 <div className="flex flex-col flex-wrap items-start mb-2 space-y-4">
