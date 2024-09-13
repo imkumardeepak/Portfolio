@@ -18,7 +18,7 @@ const NotFound = () => {
                         </h1>
                         <p className="text-base text-neutral-400 font-medium mt-5 text-center mx-auto max-w-xl">
                             The page you are looking for does not exist. If you believe this is a mistake or need further assistance, feel free to{" "}
-                            <Link href="/https://github.com/Shreyas-29/portfolio-shreyas/issues">
+                            <Link href="">
                                 <b>open an issue</b>
                             </Link>
                             . Thank you for your understanding.

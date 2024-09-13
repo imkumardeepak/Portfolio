@@ -84,7 +84,7 @@ const ContactMe = () => {
 
             <div className="flex flex-col items-center justify-center w-full">
                 <div className="flex flex-col items-center justify-center w-full gap-5 mb-8 lg:flex-row">
-                    <Link href="mailto:sihasaneshreyas@gmail.com" className="flex-[0.5] w-full lg:w-auto">
+                    <Link href="mailto:amikumardeepak@gmail.com" className="flex-[0.5] w-full lg:w-auto">
                         <Button type='button' variant="outline" className="flex-col items-start w-full h-auto p-5 hover:scale-100">
                             <h6 className="text-base font-medium text-white">
                                 Email

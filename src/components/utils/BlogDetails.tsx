@@ -17,7 +17,7 @@ const BlogDetails = ({ blog }: Props) => {
                     {blog?.title}
                 </h2>
                 <p className="text-sm text-neutral-400 font-normal mt-4">
-                    Written by Shreyas Sihasane on {moment(blog?.publishedAt).format('DD MMM YYYY')}
+                    Written by Deepak Kumar  on {moment(blog?.publishedAt).format('DD MMM YYYY')}
                 </p>
                 <div className="flex flex-row items-center mt-6">
                     <span className="text-sm text-neutral-200 flex items-center">
