@@ -14,7 +14,7 @@ const AboutMe = () => {
     <br /><br />
     My technical proficiency includes data engineering, machine learning, and mobile app development with <strong>Flutter</strong>. I have completed a B.Tech in <strong>Computer Science and Engineering</strong>, which has enhanced my analytical and problem-solving skills. I am also passionate about designing intuitive interfaces using <strong>Figma</strong> and am actively exploring technologies like <strong>TypeScript</strong> and <strong>Node.js</strong>.
     <br /><br />
-    I thrive in dynamic environments and am eager to leverage my skills to create innovative solutions. Let's collaborate to build something exceptional! ✨
+    I thrive in dynamic environments and am eager to leverage my skills to create innovative solutions.  Let&apos;s collaborate to build something exceptional! ✨
 </p>
 
               </div>
