@@ -45,7 +45,7 @@ const ProjectCards = () => {
                         {projects.length > 0 ? (
                             projects.slice(0, 4).map((project: ProjectProps) => (
                                 project ? (
-                                    <Card key={project.id} project={project} />
+                                    <Card key={project.title} project={project} />
                                 ) : (
                                     <div key="error">Error loading project</div>
                                 )

@@ -70,7 +70,7 @@ const FeaturedProjects = () => {
                 ) : (
                     projects.length > 0 ? (
                         projects.slice(0, 4).map((project: ProjectProps) => (
-                            <Project key={project.id} project={project} />
+                            <Project key={project.title} project={project} />
                         ))
                     ) : (
                         <div>No projects available</div>
