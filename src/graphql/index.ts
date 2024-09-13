@@ -25,32 +25,19 @@ export const getAbout = async () => {
 };
 
 export const getProjects = async () => {
-    const query = gql`
-        query Projects {
-            projectsConnection{
-                edges {
-                    cursor
-                    node {
-                        id
-                        title
-                        view
-                        github
-                        stack
-                        createdAt
-                        publishedAt
-                        description
-                        featuredImage {
-                            url
-                        }
-                    }
-                }
-            }
+    try {
+        const response = await fetch('/projects.json'); // Path to the JSON file in the public folder
+        if (!response.ok) {
+            throw new Error('Failed to fetch projects');
         }
-    `;
-
-    const result: any = await request(graphqlAPI, query);
-    return result.projectsConnection.edges;
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching projects:', error);
+        return [];
+    }
 };
+
 
 export const getTags = async () => {
     const query = gql`

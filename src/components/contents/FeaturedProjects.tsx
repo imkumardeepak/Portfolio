@@ -13,21 +13,27 @@ import Project from '../utils/Project';
 const FeaturedProjects = () => {
 
     const [projects, setProjects] = useState<ProjectProps[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        try {
-            const fetchProjects = async () => {
+        const fetchProjects = async () => {
+            try {
                 const data = await getProjects();
-                setProjects(data);
-            };
-            fetchProjects();
-        } catch (error) {
-            console.log(error);
-        }
+                // Check if data needs mapping or not
+                if (Array.isArray(data)) {
+                    setProjects(data);
+                } else {
+                    console.error("Unexpected data format:", data);
+                }
+            } catch (error) {
+                console.log('Error fetching projects:', error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchProjects();
     }, []);
-
-    const data = projects?.map((item: any) => item.node);
-
 
     return (
         <AnimationContainer customClassName='w-full py-12 lg:py-16 relative'>
@@ -59,9 +65,17 @@ const FeaturedProjects = () => {
             />
 
             <div className="z-20 grid w-full grid-cols-1 gap-4 mx-auto lg:gap-5 sm:grid-cols-2">
-                {data && data?.slice(0, 4)?.map((project: ProjectProps) => (
-                    <Project key={project.title} project={project} />
-                ))}
+                {isLoading ? (
+                    <div>Loading...</div>
+                ) : (
+                    projects.length > 0 ? (
+                        projects.slice(0, 4).map((project: ProjectProps) => (
+                            <Project key={project.id} project={project} />
+                        ))
+                    ) : (
+                        <div>No projects available</div>
+                    )
+                )}
             </div>
 
             <motion.div
@@ -87,4 +101,4 @@ const FeaturedProjects = () => {
     )
 };
 
-export default FeaturedProjects
+export default FeaturedProjects;

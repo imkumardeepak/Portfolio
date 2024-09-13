@@ -77,14 +77,14 @@ const Footer = () => {
 
                 <div className="flex flex-col h-full space-y-4">
 
-                    <MotionButton href="https://github.com/Shreyas-29" target="_blank" delay={0}>
+                    <MotionButton href="https://github.com/imkumardeepak" target="_blank" delay={0}>
                         <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
                             <FaGithub className="inline-block w-5 h-5 mr-2" />
                             GitHub
                         </Button>
                     </MotionButton>
 
-                    <MotionButton href="https://www.linkedin.com/in/shreyas-sihasane-441b95238" target="_blank" delay={0.5}>
+                    <MotionButton href="https://www.linkedin.com/in/deepak-kumar-9ab606195/" target="_blank" delay={0.5}>
                         <Button variant="ghost" size="sm" className="font-normal transition ease-out text-neutral-200 hover:opacity-70">
                             <IoBriefcase className="inline-block w-5 h-5 mr-2" />
                             LinkedIn

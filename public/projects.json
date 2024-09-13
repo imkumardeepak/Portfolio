@@ -1,0 +1,28 @@
+[
+    {
+        "id": "1",
+        "title": "Project One",
+        "view": "https://example.com/project-one",
+        "github": "https://github.com/user/project-one",
+        "stack": ["React", "Node.js"],
+        "createdAt": "2024-01-01T00:00:00Z",
+        "publishedAt": "2024-01-01T00:00:00Z",
+        "description": "This is the description for Project One.",
+        "featuredImage": {
+            "url": "https://example.com/image-one.jpg"
+        }
+    },
+    {
+        "id": "2",
+        "title": "Project Two",
+        "view": "https://example.com/project-two",
+        "github": "https://github.com/user/project-two",
+        "stack": ["React", "GraphQL"],
+        "createdAt": "2024-02-01T00:00:00Z",
+        "publishedAt": "2024-02-01T00:00:00Z",
+        "description": "This is the description for Project Two.",
+        "featuredImage": {
+            "url": "https://example.com/image-two.jpg"
+        }
+    }
+]

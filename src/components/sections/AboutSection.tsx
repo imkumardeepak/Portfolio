@@ -1,36 +1,28 @@
 "use client";
 
-import { getAbout } from '@/graphql';
-import { AboutProps } from '@/types';
-import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Experience from '../contents/Experience';
 import MySkills from '../contents/MySkills';
+import { motion } from 'framer-motion';
 import { Skeleton } from '../ui/Skeleton';
 import AnimationContainer from '../utils/AnimationContainer';
 import Heading from '../utils/Heading';
 import SectionContainer from '../utils/SectionContainer';
 
+// Define your local data here
+const aboutData = [
+    {
+        description: [
+            "I am a passionate developer with a love for creating innovative solutions.",
+            "With experience in various technologies and a keen interest in continuous learning, I strive to build impactful projects."
+        ]
+    }
+];
+
 const AboutSection = () => {
 
-    const [about, setAbout] = useState<AboutProps[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-
-    useEffect(() => {
-        try {
-            const fetchAbout = async () => {
-                const data = await getAbout();
-                setAbout(data);
-                setIsLoading(false);
-            };
-            fetchAbout();
-        } catch (error) {
-            console.log(error);
-            setIsLoading(false);
-        }
-    }, []);
-
-    const data = about?.map((item: any) => item.node);
+    // Directly use the local data
+    const data = aboutData;
 
     return (
         <SectionContainer>
@@ -39,27 +31,21 @@ const AboutSection = () => {
                 <Heading title="About Me" />
 
                 <AnimationContainer customClassName="w-full flex flex-col relative gap-5 mb-8">
-                    {isLoading ? (
-                        <>
-                            <Skeleton className="w-full h-24" />
-                            <Skeleton className="w-full h-32" />
-                        </>
-                    ) : (
-                        <>
-                            {data.map((item: AboutProps, index: number) => (
-                                <p key={index} className="flex flex-col w-full text-base text-justify lg:text-start lg:leading-8 text-neutral-200">
-                                    {item.description && item.description.map((line: string, lineIndex: number) => (
-                                        <React.Fragment key={lineIndex}>
-                                            {line}
-                                            {lineIndex !== item.description.length - 1 && (
-                                                <span className="w-full h-4 bg-transparent" />
-                                            )}
-                                        </React.Fragment>
-                                    ))}
-                                </p>
-                            ))}
-                        </>
-                    )}
+                    {/* No need for loading state */}
+                    <>
+                        {data.map((item, index) => (
+                            <p key={index} className="flex flex-col w-full text-base text-justify lg:text-start lg:leading-8 text-neutral-200">
+                                {item.description && item.description.map((line, lineIndex) => (
+                                    <React.Fragment key={lineIndex}>
+                                        {line}
+                                        {lineIndex !== item.description.length - 1 && (
+                                            <span className="w-full h-4 bg-transparent" />
+                                        )}
+                                    </React.Fragment>
+                                ))}
+                            </p>
+                        ))}
+                    </>
                 </AnimationContainer>
 
                 <Experience />
@@ -119,4 +105,4 @@ const AboutSection = () => {
     )
 };
 
-export default AboutSection
+export default AboutSection;
