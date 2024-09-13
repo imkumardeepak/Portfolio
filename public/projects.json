@@ -1,13 +1,13 @@
 [
     {
         "id": "1",
-        "title": "Project One",
+        "title": "Truck Management and Indenting System",
         "view": "https://example.com/project-one",
         "github": "https://github.com/user/project-one",
-        "stack": ["React", "Node.js"],
+        "stack": ["ASP .NET", "C#"],
         "createdAt": "2024-01-01T00:00:00Z",
         "publishedAt": "2024-01-01T00:00:00Z",
-        "description": "This is the description for Project One.",
+        "description": "• Developed a Truck Management and Indenting System using .NET Core MVC, which enables tracking of each truck’s current status and allows users to request trucks from transporters.\n• Collaborated with the team to implement features that enhance the system’s usability and performance.\n• Assisted in integrating various components of the application, ensuring smooth operation and user experience.",
         "featuredImage": {
             "url": "https://example.com/image-one.jpg"
         }
