@@ -1,4 +1,4 @@
-# 🚀 Deepak Kumar - Portfolio
+    # 🚀 Deepak Kumar - Portfolio
 
 Welcome to my personal portfolio repository! Here, you will find my projects, skills, and experiences as a developer.
 
@@ -40,7 +40,9 @@ Hi! I'm **Deepak Kumar**, a passionate developer with expertise in **React, Node
 
 ## 🌐 Contact Me
 
-- 📧 Email: your-email@example.com
+<<<<<<< HEAD
+
+- 📧 Email: amikumardeepak@gmail.com
 - 💼 LinkedIn: [https://www.linkedin.com/in/amikumardeepak/](https://www.linkedin.com/in/amikumardeepak/)
 - 🔗 Portfolio: [https://amikumardeepak.vercel.app/](https://amikumardeepak.vercel.app/)
 
