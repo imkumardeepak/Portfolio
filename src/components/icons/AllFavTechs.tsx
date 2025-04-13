@@ -2,7 +2,7 @@
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/Tooltip";
 import { motion } from 'framer-motion';
-import { SiGraphql, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiNodedotjs, SiReact, SiTailwindcss, SiDotnet,SiJavascript, SiCsharp, SiMicrosoftsqlserver, SiPostgresql } from "react-icons/si";
 
 const AllFavTechs = () => {
 
@@ -29,21 +29,22 @@ const AllFavTechs = () => {
                     transition={{ delayChildren: 0.2, staggerChildren: 0.05 }}
                     className="flex flex-wrap items-center justify-center mx-auto gap-x-5 lg:mx-0"
                 >
-                    <motion.li
+                     <motion.li
                         variants={animation}
                         className="opacity-100"
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-white">
-                                    <SiNextdotjs className="w-6 h-6" />
+                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#764ABC]">
+                                    <SiDotnet className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
                             <TooltipContent>
-                                <p>Next.js</p>
+                                <p>Dotnet</p>
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>
+                  
                     <motion.li
                         variants={animation}
                         className="opacity-100"
@@ -65,12 +66,28 @@ const AllFavTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#3178C6]">
-                                    <SiTypescript className="w-6 h-6" />
+                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-white">
+                                    <SiCsharp className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
                             <TooltipContent>
-                                <p>Typescript</p>
+                                <p>C#</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </motion.li>
+                    
+                    <motion.li
+                        variants={animation}
+                        className="opacity-100"
+                    >
+                        <Tooltip>
+                            <TooltipTrigger>
+                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#3178C6]">
+                                    <SiJavascript className="w-6 h-6" />
+                                </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>Javascript</p>
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>
@@ -104,18 +121,19 @@ const AllFavTechs = () => {
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>
+                   
                     <motion.li
                         variants={animation}
                         className="opacity-100"
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#764ABC]">
-                                    <SiRedux className="w-6 h-6" />
+                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#E535AB]">
+                                    <SiMicrosoftsqlserver className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
                             <TooltipContent>
-                                <p>Redux</p>
+                                <p>Sql Server</p>
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>
@@ -125,12 +143,12 @@ const AllFavTechs = () => {
                     >
                         <Tooltip>
                             <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#E535AB]">
-                                    <SiGraphql className="w-6 h-6" />
+                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#336791]">
+                                    <SiPostgresql className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
                             <TooltipContent>
-                                <p>Graphql</p>
+                                <p>Postgresql</p>
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>

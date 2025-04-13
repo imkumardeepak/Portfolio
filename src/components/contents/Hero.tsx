@@ -6,11 +6,11 @@ const Hero = () => {
         <div className="relative flex flex-col-reverse items-center justify-between w-full py-12 lg:py-16 lg:flex-row">
             <AnimationContainer customClassName="flex flex-col items-center justify-between max-w-lg lg:items-start p-0 lg:pr-8">
                 <h3 className="text-sm lg:text-xl text-white/80">
-                Welcome, Visionary Code Crafter{" "}
-                    <span className="text-white">🚀</span>
+                Welcome
+                    <span className="text-white">👋🏻</span>
                 </h3>
                 <h1 className="py-2 text-xl font-bold text-white lg:py-4 sm:text-3xl lg:text-5xl">
-                    Deepak Kumar
+                    Deepak Verma
                 </h1>
                 <h3 className="text-base text-center lg:text-start lg:text-lg text-white/80">
     <span className="font-medium text-white">

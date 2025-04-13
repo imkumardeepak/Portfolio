@@ -2,7 +2,7 @@
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/Tooltip";
 import { motion } from 'framer-motion';
-import { SiAmazon, SiExpo, SiFramer, SiIonic, SiMui, SiPostgresql, SiReactquery, SiRedis, SiSocketdotio, SiTrpc } from "react-icons/si";
+import { SiAmazon, SiExpo, SiFramer, SiIonic, SiMui, SiOracle, SiPostgresql, SiReactquery, SiRedis, SiSocketdotio, SiTrpc } from "react-icons/si";
 
 const AllLearningTechs = () => {
 
@@ -74,21 +74,7 @@ const AllLearningTechs = () => {
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>
-                    <motion.li
-                        variants={animation}
-                        className="opacity-100"
-                    >
-                        <Tooltip>
-                            <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#00BFFF]">
-                                    <SiTrpc className="w-6 h-6" />
-                                </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <p>TRPC</p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </motion.li>
+                  
                     <motion.li
                         variants={animation}
                         className="opacity-100"
@@ -104,21 +90,7 @@ const AllLearningTechs = () => {
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>
-                    <motion.li
-                        variants={animation}
-                        className="opacity-100"
-                    >
-                        <Tooltip>
-                            <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#FFF]">
-                                    <SiExpo className="w-6 h-6" />
-                                </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <p>Expo</p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </motion.li>
+                   
                     <motion.li
                         variants={animation}
                         className="opacity-100"
@@ -141,11 +113,11 @@ const AllLearningTechs = () => {
                         <Tooltip>
                             <TooltipTrigger>
                                 <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#336791]">
-                                    <SiPostgresql className="w-6 h-6" />
+                                    <SiOracle className="w-6 h-6" />
                                 </div>
                             </TooltipTrigger>
                             <TooltipContent>
-                                <p>Postgresql</p>
+                                <p>Oracle</p>
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>
@@ -164,21 +136,7 @@ const AllLearningTechs = () => {
                             </TooltipContent>
                         </Tooltip>
                     </motion.li>
-                    <motion.li
-                        variants={animation}
-                        className="opacity-100"
-                    >
-                        <Tooltip>
-                            <TooltipTrigger>
-                                <div className="transition duration-300 ease-out text-neutral-700 hover:text-[#FF9900]">
-                                    <SiAmazon className="w-6 h-6" />
-                                </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <p>AWS</p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </motion.li>
+                   
                 </motion.ul>
             </TooltipProvider>
         </>
