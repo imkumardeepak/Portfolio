@@ -1,68 +1,68 @@
 [
-    {
-        "id": "1",
-        "title": "Truck Management and Indenting System",
-        "view": "https://example.com/project-one",
-        "github": "https://github.com/user/project-one",
-        "stack": ["ASP .NET", "C#"],
-        "createdAt": "2024-01-01T00:00:00Z",
-        "publishedAt": "2024-01-01T00:00:00Z",
-        "description": "• Developed a Truck Management and Indenting System using .NET Core MVC, which enables tracking of each truck’s current status and allows users to request trucks from transporters.\n• Collaborated with the team to implement features that enhance the system’s usability and performance.\n• Assisted in integrating various components of the application, ensuring smooth operation and user experience.",
-        "featuredImage": {
-            "url": "https://example.com/image-one.jpg"
-        }
-    },
-
-    {
-        "id": "3",
-        "title": "Asset Verification and Barcode System",
-        "view": "https://example.com/project-three",
-        "github": "https://github.com/user/project-three",
-        "stack": ["React.js", ".NET Core Api", "Android", "Flutter"],
-        "createdAt": "2024-03-01T00:00:00Z",
-        "publishedAt": "2024-03-01T00:00:00Z",
-        "description": "• Developed an Asset Verification and Barcode System using React.js and .NET Core Web API, which helps users track the current status and condition of each asset.\n• Implemented features to map RFID tags and conduct offline verification using an Android app, including data synchronization with the main database.\n• Enhanced system functionality by integrating offline and online data synchronization, improving asset tracking accuracy and operational efficiency.",
-        "featuredImage": {
-            "url": "https://example.com/image-three.jpg"
-        }
-    },
-    {
-        "id": "4",
-        "title": "Face Recognition Attendance System",
-        "view": "https://example.com/project-four",
-        "github": "https://github.com/user/project-four",
-        "stack": ["Flutter", "Python Flask", "OpenCV", "Dlib"],
-        "createdAt": "2024-04-01T00:00:00Z",
-        "publishedAt": "2024-04-01T00:00:00Z",
-        "description": "• Developed an Android app using Flutter for efficient attendance tracking through facial recognition.\n• Implemented image capture and transmission to a Python Flask API, utilizing OpenCV and Dlib for processing.\n• Improved attendance accuracy and convenience, allowing users to record their presence without physical interaction.",
-        "featuredImage": {
-            "url": "https://example.com/image-four.jpg"
-        }
-    },
-    {
-        "id": "5",
-        "title": "Integration with Direct Apply Printer",
-        "view": "https://example.com/project-five",
-        "github": "https://github.com/user/project-five",
-        "stack": ["LINX Inkjet", "Videojet", "HEXA Text"],
-        "createdAt": "2024-05-01T00:00:00Z",
-        "publishedAt": "2024-05-01T00:00:00Z",
-        "description": "• Led the integration of LINX Inkjet and Videojet printers into a custom application, enabling direct message creation on the printers.\n• Enabled direct communication between the application and printers using HEXA text, streamlining the printing process.\n• Enhanced operational efficiency by allowing seamless message updates on printers without manual intervention.",
-        "featuredImage": {
-            "url": "https://example.com/image-five.jpg"
-        }
-    },
-    {
-        "id": "6",
-        "title": "Weighbridge Management Application",
-        "view": "https://example.com/project-six",
-        "github": "https://github.com/user/project-six",
-        "stack": [".NET Framework", "Dahua SDK", "Hikvision SDK"],
-        "createdAt": "2024-06-01T00:00:00Z",
-        "publishedAt": "2024-06-01T00:00:00Z",
-        "description": "• Developed a robust Windows application using the .NET Framework to manage the weighing process of vehicles during both entry (IN) and exit (OUT).\n• Integrated IPC cameras for real-time image capture at each stage, utilizing SDKs from Dahua and Hikvision for direct and seamless access to the camera feeds.\n• Designed a comprehensive system for accurate vehicle data recording, including the storage of each vehicle’s weight, material type, and truck records in the database.\n• Implemented automated slip generation for company records, streamlining truck movement tracking and ensuring precise documentation for operational efficiency.",
-        "featuredImage": {
-            "url": "https://example.com/image-six.jpg"
-        }
+  {
+    "id": "1",
+    "title": "Truck Management and Indenting System",
+    "view": "https://example.com/project-one",
+    "github": "https://github.com/user/project-one",
+    "stack": ["ASP .NET", "C#"],
+    "createdAt": "2024-01-01T00:00:00Z",
+    "publishedAt": "2024-01-01T00:00:00Z",
+    "description": "• Developed a Truck Management and Indenting System using .NET Core MVC, which enables tracking of each truck’s current status and allows users to request trucks from transporters.\n• Collaborated with the team to implement features that enhance the system’s usability and performance.\n• Assisted in integrating various components of the application, ensuring smooth operation and user experience.",
+    "featuredImage": {
+      "url": "https://example.com/image-one.jpg"
     }
+  },
+
+  {
+    "id": "3",
+    "title": "Asset Verification and Barcode System",
+    "view": "https://example.com/project-three",
+    "github": "https://github.com/imkumardeepak/AssetVerification.git",
+    "stack": ["React.js", ".NET Core Api", "Android", "Flutter"],
+    "createdAt": "2024-03-01T00:00:00Z",
+    "publishedAt": "2024-03-01T00:00:00Z",
+    "description": "• Developed an Asset Verification and Barcode System using React.js and .NET Core Web API, which helps users track the current status and condition of each asset.\n• Implemented features to map RFID tags and conduct offline verification using an Android app, including data synchronization with the main database.\n• Enhanced system functionality by integrating offline and online data synchronization, improving asset tracking accuracy and operational efficiency.",
+    "featuredImage": {
+      "url": "https://example.com/image-three.jpg"
+    }
+  },
+  {
+    "id": "4",
+    "title": "Face Recognition Attendance System",
+    "view": "https://example.com/project-four",
+    "github": "https://github.com/user/project-four",
+    "stack": ["Flutter", "Python Flask", "OpenCV", "Dlib"],
+    "createdAt": "2024-04-01T00:00:00Z",
+    "publishedAt": "2024-04-01T00:00:00Z",
+    "description": "• Developed an Android app using Flutter for efficient attendance tracking through facial recognition.\n• Implemented image capture and transmission to a Python Flask API, utilizing OpenCV and Dlib for processing.\n• Improved attendance accuracy and convenience, allowing users to record their presence without physical interaction.",
+    "featuredImage": {
+      "url": "https://example.com/image-four.jpg"
+    }
+  },
+  {
+    "id": "5",
+    "title": "Integration with Direct Apply Printer",
+    "view": "https://example.com/project-five",
+    "github": "https://github.com/user/project-five",
+    "stack": ["LINX Inkjet", "Videojet", "HEXA Text"],
+    "createdAt": "2024-05-01T00:00:00Z",
+    "publishedAt": "2024-05-01T00:00:00Z",
+    "description": "• Led the integration of LINX Inkjet and Videojet printers into a custom application, enabling direct message creation on the printers.\n• Enabled direct communication between the application and printers using HEXA text, streamlining the printing process.\n• Enhanced operational efficiency by allowing seamless message updates on printers without manual intervention.",
+    "featuredImage": {
+      "url": "https://example.com/image-five.jpg"
+    }
+  },
+  {
+    "id": "6",
+    "title": "Weighbridge Management Application",
+    "view": "https://example.com/project-six",
+    "github": "https://github.com/user/project-six",
+    "stack": [".NET Framework", "Dahua SDK", "Hikvision SDK"],
+    "createdAt": "2024-06-01T00:00:00Z",
+    "publishedAt": "2024-06-01T00:00:00Z",
+    "description": "• Developed a robust Windows application using the .NET Framework to manage the weighing process of vehicles during both entry (IN) and exit (OUT).\n• Integrated IPC cameras for real-time image capture at each stage, utilizing SDKs from Dahua and Hikvision for direct and seamless access to the camera feeds.\n• Designed a comprehensive system for accurate vehicle data recording, including the storage of each vehicle’s weight, material type, and truck records in the database.\n• Implemented automated slip generation for company records, streamlining truck movement tracking and ensuring precise documentation for operational efficiency.",
+    "featuredImage": {
+      "url": "https://example.com/image-six.jpg"
+    }
+  }
 ]
