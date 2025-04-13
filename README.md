@@ -1,10 +1,12 @@
-    # 🚀 Deepak Kumar - Portfolio
+    # 🚀 Deepak Verma - Portfolio
 
 Welcome to my personal portfolio repository! Here, you will find my projects, skills, and experiences as a developer.
 
+![Project Screenshot](/public/images/IndexView.png)
+
 ## 📌 About Me
 
-Hi! I'm **Deepak Kumar**, a passionate developer with expertise in **React, Node.js, FastAPI, PostgreSQL, .NET, and WPF**. I love building scalable and high-performance applications.
+Hi! I'm **Deepak Verma**, a passionate developer with expertise in **React, Node.js, FastAPI, PostgreSQL, .NET, and WPF**. I love building scalable and high-performance applications.
 
 ## 🛠️ Tech Stack
 
