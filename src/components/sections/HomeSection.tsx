@@ -1,3 +1,4 @@
+import SplashCursor from '../../../components/nurui/splash-cursor'
 import AbuotMe from '../contents/AbuotMe'
 import ContactMe from '../contents/ContactMe'
 import CurrentFavTech from '../contents/CurrentFavTech'
@@ -29,8 +30,9 @@ const HomeSection = () => {
                 <ContactMe />
 
             </div>
-
+             <SplashCursor />
         </SectionContainer>
+        
     )
 };
 

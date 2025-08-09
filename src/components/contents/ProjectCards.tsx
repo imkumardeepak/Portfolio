@@ -15,8 +15,7 @@ const ProjectCards = () => {
         const fetchProjects = async () => {
             try {
                 const data = await getProjects();
-                console.log('Fetched data:', data); // Debugging statement
-                // Assuming data has a 'node' property
+                console.log('Fetched data:', data);
                 setProjects(data);
             } catch (error) {
                 console.log('Error fetching projects:', error);
