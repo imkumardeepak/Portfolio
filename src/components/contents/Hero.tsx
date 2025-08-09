@@ -6,6 +6,7 @@ import WavesHero from "../../../components/nurui/waves-hero";
 import { motion } from "framer-motion";
 import GradientText from "../../../components/nurui/gradient-text";
 import { AuroraText } from "../../../components/nurui/aurora";
+import TypewriterText from "../../../components/nurui/TypewriterText";
 
 const Hero = () => {
   return (
@@ -32,20 +33,19 @@ const Hero = () => {
         <AuroraText
           className="py-2 text-4xl font-bold  lg:py-4 sm:text-3xl lg:text-5xl font-sans"
           speed={1}
-          colors={["#38BDF8", "#3B82F6", "#EC4899"]}
+          colors={["#38BDF8", "#3B82F6", "#EC4899", "#FF7E5C", "#F5D361"]}
         >
           Deepak Verma
         </AuroraText>{" "}
-        <h3 className="text-base text-center lg:text-start lg:text-lg text-white/80">
-          <span className="font-medium text-white">
-            Bridging Frontend and Backend{" "}
-          </span>
-          to create seamless, efficient, and visually appealing full-stack web
-          applications.
-        </h3>
+        <TypewriterText
+          className="text-base text-center lg:text-start lg:text-lg text-white/80"
+          text=" Building scalable, user-centric applications with .NET Core, C#,
+          React.js, Next.js , and databases such as SQL Server, PostgreSQL, and
+          Oracle."
+        />
       </AnimationContainer>
 
-      <AnimationContainer customClassName="mb-8 relative lg:mb-0">
+      <AnimationContainer customClassName="mb-4 relative lg:mb-0">
         <Image
           src="/images/Deepak.jpg"
           alt="Deepak Kumar"

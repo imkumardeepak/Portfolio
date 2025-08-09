@@ -1,6 +1,8 @@
 "use client";
+
 import React, { memo } from "react";
 
+// Define the props interface for type safety
 interface AuroraTextProps {
   children: React.ReactNode;
   className?: string;
@@ -8,31 +10,51 @@ interface AuroraTextProps {
   speed?: number;
 }
 
-export const AuroraText = memo(
+// The main component, now including the necessary CSS
+export const AuroraText: React.FC<AuroraTextProps> = memo(
   ({
     children,
     className = "",
-
     colors = ["#FF0080", "#7928CA", "#0070F3", "#38bdf8", "#f43f5e"],
-
     speed = 5,
-  }: AuroraTextProps) => {
+  }) => {
+    // The CSS for the animation keyframes is now a part of this component
+    // This ensures the animation class is always available.
+    // The @keyframes and the .animate-aurora class are essential for the animation to work.
+    const auroraStyles = `
+      @keyframes aurora {
+        0%   { background-position: 0% 50%; }
+        50%  { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-aurora {
+        animation-name: aurora;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .animate-aurora { animation: none; }
+      }
+    `;
+
     const gradientStyle = {
       backgroundImage: `linear-gradient(135deg, ${colors.join(", ")}, ${
         colors[0]
       })`,
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-
-      animationDuration: `${10 / speed}s`,
+      backgroundSize: "200% auto", // This is crucial for the animation to work
+      animationDuration: `${10 / speed}s`, // The animation duration is applied here
     };
 
     return (
       <span className={`relative inline-block ${className}`}>
+        {/* The screen-reader-only span ensures accessibility */}
         <span className="sr-only">{children}</span>
 
+        {/* The style tag is used to inject the keyframes for this component */}
+        <style>{auroraStyles}</style>
+
         <span
-          className="relative animate-aurora bg-[length:200%_auto] bg-clip-text text-transparent"
+          className="relative animate-aurora bg-clip-text text-transparent"
           style={gradientStyle}
           aria-hidden="true"
         >
@@ -45,25 +67,4 @@ export const AuroraText = memo(
 
 AuroraText.displayName = "AuroraText";
 
-export default function AuroraView() {
-  return (
-    <>
-      <style>{`
-        @keyframes aurora {
-          0%   { background-position: 0% 50%; }
-          50%  { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        /* The animation duration is now set via inline styles, so we don't need the --duration variable here. */
-        .animate-aurora {
-          animation-name: aurora;
-          animation-timing-function: ease-in-out;
-          animation-iteration-count: infinite;
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .animate-aurora { animation: none; }
-        }
-      `}</style>
-    </>
-  );
-}
+export default AuroraText;
