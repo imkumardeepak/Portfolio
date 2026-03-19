@@ -3,46 +3,30 @@
 import Image from "next/image";
 import AnimationContainer from "../utils/AnimationContainer";
 import WavesHero from "../../../components/nurui/waves-hero";
-import { motion } from "framer-motion";
-import GradientText from "../../../components/nurui/gradient-text";
-import { AuroraText } from "../../../components/nurui/aurora";
-import TypewriterText from "../../../components/nurui/TypewriterText";
-
 const Hero = () => {
   return (
-    <div className="relative flex flex-col-reverse items-center justify-between w-full py-12 lg:py-16 lg:flex-row">
+    <div className="relative flex flex-col-reverse items-center justify-between w-full py-4 lg:py-8 lg:flex-row">
       <AnimationContainer customClassName="flex flex-col items-center justify-between max-w-lg lg:items-start p-0 lg:pr-8">
-        <h3 className="text-sm lg:text-xl text-white/80">
-          Welcome{" "}
-          <motion.span
-            className="inline-block"
-            animate={{
-              rotate: [0, 14, -8, 14, 0],
-              rotateY: [0, 10, -10, 10, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatDelay: 1,
-            }}
-          >
-            👋🏻
-          </motion.span>
-        </h3>
-        <AuroraText
-          className="py-2 text-4xl font-bold  lg:py-4 sm:text-3xl lg:text-5xl font-sans"
-          speed={1}
-          colors={["#38BDF8", "#3B82F6", "#EC4899", "#FF7E5C", "#F5D361"]}
-        >
-          Deepak Verma
-        </AuroraText>{" "}
-        <TypewriterText
-          className="text-base text-center lg:text-start lg:text-lg text-white/80"
-          text=" Building scalable, user-centric applications with .NET Core, C#,
-          React.js, Next.js , and databases such as SQL Server, PostgreSQL, and
-          Oracle."
-        />
+        <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-900/80 dark:bg-white/10 border border-gray-700 dark:border-gray-600 rounded-full text-xs sm:text-sm text-gray-200 dark:text-gray-300 backdrop-blur-sm hover:bg-gray-800 dark:hover:bg-white/20 transition-all duration-300">
+          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          Welcome to my universe
+        </div>
+
+        <div className="relative mt-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight text-white">
+            Hello <br />
+            I&apos;m{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Deepak Verma
+            </span>
+          </h1>
+        </div>
+
+        <p className="mt-4 text-base text-center lg:text-start lg:text-lg text-white/80">
+          Building scalable, user-centric applications with .NET Core, C#,
+          React.js, Next.js, and databases such as SQL Server, PostgreSQL, and
+          Oracle.
+        </p>
       </AnimationContainer>
 
       <AnimationContainer customClassName="mb-4 relative lg:mb-0">

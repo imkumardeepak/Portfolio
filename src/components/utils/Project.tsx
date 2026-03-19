@@ -4,8 +4,6 @@ import { SiGithub } from "react-icons/si";
 import { TbExternalLink } from "react-icons/tb";
 import { Button } from "../ui/Button";
 import AnimationContainer from "./AnimationContainer";
-import { GlowCard } from "../../../components/nurui/spotlight-card";
-
 interface Props {
   project: ProjectProps;
 }
@@ -32,10 +30,7 @@ const Project = ({ project }: Props) => {
   };
 
   return (
-    <GlowCard
-      className="bg-[#080809] border border-border/50 w-full hover:border-neutral-800 rounded-xl"
-      customSize={true}
-    >
+    <div className="bg-[#080809] border border-border/50 w-full hover:border-neutral-800 rounded-xl">
       <div className="flex-col items-start p-4 h-full flex lg:p-5">
         <h4 className="text-lg font-medium text-neutral-100">
           {project?.title}
@@ -58,7 +53,7 @@ const Project = ({ project }: Props) => {
           </Link>
         </div>
       </div>
-    </GlowCard>
+    </div>
   );
 };
 
