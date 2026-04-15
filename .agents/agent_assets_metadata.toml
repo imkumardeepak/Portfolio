@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "5ba4dC6TZrYV8EJJN9NtL"
+uri = "file://artifacts/portfolio/public/avatar.png"
+type = "image"
+title = "Stylized abstract avatar"
+
+[[generated]]
+id = "InKxxsOjF62wWH2buVLbQ"
+uri = "file://artifacts/portfolio/public/project-1.png"
+type = "image"
+title = "Abstract project preview NovaPulse"
+
+[[generated]]
+id = "g0V_CgMCoVjjTJPlEt8UY"
+uri = "file://artifacts/portfolio/public/project-2.png"
+type = "image"
+title = "Abstract project preview Verdant"
+
+[[generated]]
+id = "I802-r1tv0QryO7tMPFcb"
+uri = "file://artifacts/portfolio/public/project-3.png"
+type = "image"
+title = "Abstract project preview Orbit"
+
+[[generated]]
+id = "W-2YdMpRd2S5xdgxvHXfx"
+uri = "file://artifacts/portfolio/public/project-4.png"
+type = "image"
+title = "Abstract project preview Aurora"
