@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { HeroGlobe } from "./HeroGlobe";
 
 const SOCIAL_LINKS = [
-  { href: "https://github.com/deepakverma", icon: Github, label: "GitHub" },
-  { href: "https://linkedin.com/in/deepakverma", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://github.com/imkumardeepak", icon: Github, label: "GitHub" },
+  { href: "https://www.linkedin.com/in/amikumardeepak/", icon: Linkedin, label: "LinkedIn" },
   { href: "mailto:amikumardeepak@gmail.com", icon: Mail, label: "Email" },
   { href: "tel:+918409671140", icon: Phone, label: "Phone" },
 ];

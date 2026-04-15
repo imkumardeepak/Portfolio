@@ -9,8 +9,8 @@ import { Send, Loader2, Mail, Phone, Github, Linkedin } from "lucide-react";
 const CONTACT_INFO = [
   { icon: Mail, label: "Email", value: "amikumardeepak@gmail.com", href: "mailto:amikumardeepak@gmail.com" },
   { icon: Phone, label: "Phone", value: "+91 8409671140", href: "tel:+918409671140" },
-  { icon: Github, label: "GitHub", value: "github.com/deepakverma", href: "https://github.com/deepakverma" },
-  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/deepakverma", href: "https://linkedin.com/in/deepakverma" },
+  { icon: Github, label: "GitHub", value: "github.com/imkumardeepak", href: "https://github.com/imkumardeepak" },
+  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/amikumardeepak", href: "https://www.linkedin.com/in/amikumardeepak/" },
 ];
 
 export function Contact() {

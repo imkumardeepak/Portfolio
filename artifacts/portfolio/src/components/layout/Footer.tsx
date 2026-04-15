@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto max-w-5xl flex flex-col items-center justify-center gap-6">
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com/deepakverma"
+            href="https://github.com/imkumardeepak"
             target="_blank"
             rel="noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors p-2"
@@ -15,7 +15,7 @@ export function Footer() {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://linkedin.com/in/deepakverma"
+            href="https://www.linkedin.com/in/amikumardeepak/"
             target="_blank"
             rel="noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors p-2"
