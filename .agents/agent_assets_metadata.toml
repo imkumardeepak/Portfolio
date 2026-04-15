@@ -30,3 +30,9 @@ id = "W-2YdMpRd2S5xdgxvHXfx"
 uri = "file://artifacts/portfolio/public/project-4.png"
 type = "image"
 title = "Abstract project preview Aurora"
+
+[[generated]]
+id = "K6GO6MSSWg9Q1NqQAPQZa"
+uri = "file://attached_assets/generated_images/generated_image.png"
+type = "image"
+title = "generated_image"

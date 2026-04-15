@@ -1,10 +1,17 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Code2, Layers, Cpu } from "lucide-react";
+import { ArrowUpRight, Code2, Layers, Zap } from "lucide-react";
 
 const HIGHLIGHTS = [
-  { icon: Code2, label: "Clean Code", desc: "SOLID principles & DRY patterns" },
-  { icon: Layers, label: "Full Stack", desc: "Frontend to backend & cloud" },
-  { icon: Cpu, label: ".NET Expert", desc: "C#, ASP.NET Core, EF Core" },
+  { icon: Code2, label: "3+ Years", desc: "Enterprise .NET development" },
+  { icon: Layers, label: "Full Stack", desc: "ASP.NET Core to React frontends" },
+  { icon: Zap, label: "Performance", desc: "30% API speed improvement" },
+];
+
+const STATS = [
+  { value: "3+", label: "Years Experience" },
+  { value: "1K+", label: "Daily Transactions" },
+  { value: "30%", label: "API Performance Gain" },
+  { value: "5+", label: "Enterprise Projects" },
 ];
 
 export function About() {
@@ -24,22 +31,38 @@ export function About() {
           {...inView()}
           className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-16 items-center"
         >
-          {/* Avatar side */}
-          <div className="relative group">
-            <motion.div
-              whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="aspect-square overflow-hidden rounded-2xl bg-muted relative z-10 border border-white/10 shadow-2xl shadow-primary/10"
-            >
-              <img
-                src="/avatar.png"
-                alt="Deepak Kumar"
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
-            </motion.div>
-            <div className="absolute -inset-4 border border-primary/20 rounded-2xl -z-10 group-hover:rotate-3 transition-transform duration-500" />
-            <div className="absolute -inset-4 border border-secondary/10 rounded-2xl -z-10 group-hover:-rotate-2 transition-transform duration-500 delay-75" />
+          {/* Avatar + stats side */}
+          <div className="flex flex-col gap-6">
+            <div className="relative group">
+              <motion.div
+                whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="aspect-square overflow-hidden rounded-2xl bg-muted relative z-10 border border-white/10 shadow-2xl shadow-primary/10"
+              >
+                <img
+                  src="/avatar.png"
+                  alt="Deepak Verma"
+                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
+              </motion.div>
+              <div className="absolute -inset-4 border border-primary/20 rounded-2xl -z-10 group-hover:rotate-3 transition-transform duration-500" />
+              <div className="absolute -inset-4 border border-secondary/10 rounded-2xl -z-10 group-hover:-rotate-2 transition-transform duration-500 delay-75" />
+            </div>
+
+            {/* Stats grid */}
+            <div className="grid grid-cols-2 gap-3">
+              {STATS.map(({ value, label }) => (
+                <motion.div
+                  key={label}
+                  {...inView(0.15)}
+                  className="glass-panel p-4 rounded-xl text-center border border-white/5 hover:border-primary/20 transition-colors duration-300"
+                >
+                  <p className="text-2xl font-extrabold text-primary">{value}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{label}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           {/* Text side */}
@@ -53,13 +76,13 @@ export function About() {
 
             <motion.div {...inView(0.18)} className="space-y-5 text-base md:text-lg text-muted-foreground">
               <p>
-                Hi! I'm <span className="text-foreground font-medium">Deepak Kumar</span>, a .NET Full Stack Developer with a strong passion for building enterprise-grade web applications. I specialize in the Microsoft technology stack — crafting powerful backend APIs with ASP.NET Core and responsive frontends with React and Angular.
+                Hi! I'm <span className="text-foreground font-medium">Deepak Verma</span>, a Full Stack Developer with 3+ years of professional experience building enterprise-grade applications on the Microsoft technology stack.
               </p>
               <p>
-                My engineering journey spans diverse domains — from designing scalable microservice architectures and RESTful APIs to building database-driven solutions with SQL Server and Entity Framework. I take pride in writing clean, maintainable code that stands the test of time.
+                At <span className="text-foreground font-medium">Aarkay Techno Consultants</span>, I've architected and delivered mission-critical systems handling 1,000+ daily transactions. My focus on performance optimization led to a <span className="text-primary font-medium">30% improvement in API response times</span>, directly impacting user satisfaction and business efficiency.
               </p>
               <p>
-                When I'm not coding, I enjoy exploring new .NET features, contributing to the developer community, and continuously leveling up my skills.
+                I specialize in ASP.NET Core microservices, RESTful and GraphQL APIs, and full-stack delivery with React and Angular frontends. I also mentor junior developers and champion clean architecture principles across the team.
               </p>
             </motion.div>
 

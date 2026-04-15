@@ -3,42 +3,52 @@ import { ExternalLink, Github } from "lucide-react";
 
 const PROJECTS = [
   {
-    title: "Enterprise HR Management System",
+    title: "Milk Bakery Order Management",
     type: "Full Stack .NET Application",
     description:
-      "A comprehensive HR management platform built with ASP.NET Core and React. Features employee onboarding workflows, leave management, payroll processing, and role-based access control. Backed by SQL Server with Entity Framework Core.",
-    tech: ["ASP.NET Core", "React", "SQL Server", "Entity Framework", "Azure AD"],
+      "A comprehensive order management system for a milk and bakery business. Handles daily product orders, delivery scheduling, customer billing, and inventory tracking. Built with ASP.NET Core Web API backend and a React frontend, backed by SQL Server with optimized stored procedures for high-volume order processing.",
+    tech: ["ASP.NET Core", "React.js", "SQL Server", "Entity Framework", "REST API"],
     image: "/project-1.png",
     github: "#",
     live: "#",
   },
   {
-    title: "Real-Time Order Tracking API",
-    type: "Backend .NET Microservice",
+    title: "Weighbridge Management Application",
+    type: "Enterprise Desktop + Web App",
     description:
-      "A high-performance microservice for real-time order lifecycle tracking using ASP.NET Core Web API and SignalR. Supports push notifications, live status updates across clients, and integrates with third-party logistics APIs.",
-    tech: ["ASP.NET Core", "SignalR", "Azure Service Bus", "SQL Server", "Docker"],
+      "An industrial weighbridge management system for recording vehicle weights, entry/exit logs, and generating weight-based billing reports. Integrates directly with hardware scale devices via serial communication. Built with WPF for the desktop client and ASP.NET Core Web API for centralized data management.",
+    tech: ["WPF", "ASP.NET Core", "SQL Server", "Hardware Integration", "C#"],
     image: "/project-2.png",
     github: "#",
     live: "#",
   },
   {
-    title: "E-Commerce Platform",
-    type: "Full Stack Web Application",
+    title: "Truck Management System",
+    type: "Full Stack Fleet Management",
     description:
-      "A full-featured e-commerce solution with product catalog, shopping cart, Stripe payment integration, and an Angular-based admin dashboard. Built on .NET Web API with a clean layered architecture using the repository pattern.",
-    tech: ["ASP.NET Core", "Angular", "Stripe API", "PostgreSQL", "Entity Framework"],
+      "An end-to-end fleet and logistics management platform for tracking trucks, trips, drivers, and fuel records. Features real-time trip status updates using SignalR, route logging, maintenance scheduling, and detailed analytics dashboards. Handles 1,000+ daily transactions reliably with optimized API performance.",
+    tech: ["ASP.NET Core", "Angular", "SignalR", "SQL Server", "Docker", "REST API"],
     image: "/project-3.png",
     github: "#",
     live: "#",
   },
   {
-    title: "Inventory & Warehouse Management",
-    type: "Enterprise Web Application",
+    title: "Asset Verification System",
+    type: "Enterprise Asset Management",
     description:
-      "An end-to-end warehouse management system for tracking stock levels, purchase orders, and supplier relationships. Features barcode scanning support, automated low-stock alerts, and detailed reporting dashboards.",
-    tech: ["Blazor", "C#", ".NET", "SQL Server", "REST APIs"],
+      "A digital asset verification and audit platform for enterprise inventory management. Supports barcode and QR code scanning for asset tagging, verification workflows with role-based approvals, audit trail logging, and reporting. Built to replace paper-based audits with a fully digitized, trackable process.",
+    tech: ["ASP.NET Core", "React.js", "SQL Server", "Entity Framework", "QR Integration"],
     image: "/project-4.png",
+    github: "#",
+    live: "#",
+  },
+  {
+    title: "Printer Integration Platform",
+    type: "Device Integration & Management",
+    description:
+      "A centralized printer and device integration platform that manages print jobs, driver configurations, and device health monitoring across multiple printers on a network. Supports thermal, label, and document printers through a unified API layer. Provides real-time status monitoring and job queue management via a web dashboard.",
+    tech: ["ASP.NET Core", "Windows Forms", "C#", "REST API", "SQL Server", "Device SDKs"],
+    image: "/project-5.png",
     github: "#",
     live: "#",
   },
@@ -62,14 +72,12 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
         whileHover={shouldReduceMotion ? {} : { scale: 1.015, transition: { duration: 0.35 } }}
       >
         <div className="relative aspect-video rounded-xl overflow-hidden border border-white/8 shadow-2xl shadow-black/40">
-          {/* Color overlay */}
           <div className="absolute inset-0 bg-primary/25 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500 z-10" />
           <img
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
           />
-          {/* Subtle inner glow on hover */}
           <div className="absolute inset-0 ring-1 ring-primary/0 group-hover:ring-primary/30 rounded-xl transition-all duration-400 z-20" />
         </div>
       </motion.div>
@@ -81,7 +89,7 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
         <p className="text-primary font-mono text-xs tracking-wider uppercase mb-2">
           {project.type}
         </p>
-        <h3 className="text-2xl md:text-3xl font-bold mb-5 hover:text-primary transition-colors duration-200 cursor-default">
+        <h3 className="text-xl md:text-2xl font-bold mb-5 hover:text-primary transition-colors duration-200 cursor-default">
           {project.title}
         </h3>
 
@@ -98,18 +106,11 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
           className={`flex flex-wrap gap-3 text-xs font-mono text-muted-foreground mb-6 ${isEven ? "lg:justify-end" : "lg:justify-start"}`}
         >
           {project.tech.map((tech) => (
-            <li
-              key={tech}
-              className="hover:text-primary transition-colors duration-200"
-            >
-              {tech}
-            </li>
+            <li key={tech} className="hover:text-primary transition-colors duration-200">{tech}</li>
           ))}
         </ul>
 
-        <div
-          className={`flex items-center gap-4 ${isEven ? "lg:justify-end" : "lg:justify-start"}`}
-        >
+        <div className={`flex items-center gap-4 ${isEven ? "lg:justify-end" : "lg:justify-start"}`}>
           {[
             { href: project.github, Icon: Github, label: "GitHub" },
             { href: project.live, Icon: ExternalLink, label: "Live Demo" },

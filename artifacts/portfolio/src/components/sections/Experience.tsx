@@ -1,29 +1,28 @@
 import { motion, useReducedMotion } from "framer-motion";
+import { TrendingUp, Users, Zap } from "lucide-react";
 
 const EXPERIENCES = [
   {
-    role: ".NET Full Stack Developer",
-    company: "Software Development Company",
-    date: "2022 — Present",
+    role: "Full Stack Developer",
+    company: "Aarkay Techno Consultants",
+    date: "Jul 2022 — Present",
     description:
-      "Designing and developing enterprise-grade web applications using ASP.NET Core and React. Lead backend architecture decisions, implement RESTful APIs, and manage SQL Server databases. Collaborate closely with product and design teams to deliver clean, performant solutions.",
-    tech: ["ASP.NET Core", "React", "SQL Server", "Azure", "Entity Framework Core"],
+      "Lead the design and development of enterprise web applications handling 1,000+ daily business transactions. Architected scalable microservices using ASP.NET Core and delivered React/Angular frontends. Drove a 30% API performance improvement through query optimization and caching strategies. Mentor junior developers and conduct code reviews to maintain high code quality.",
+    tech: ["ASP.NET Core", "React.js", "SQL Server", "Microservices", "Entity Framework Core", "Docker"],
+    achievements: [
+      { icon: Zap, text: "30% API performance improvement" },
+      { icon: TrendingUp, text: "1K+ daily transactions handled" },
+      { icon: Users, text: "Mentored junior developers" },
+    ],
   },
   {
-    role: "Junior .NET Developer",
-    company: "IT Solutions Firm",
-    date: "2020 — 2022",
+    role: ".NET Developer Intern",
+    company: "Aarkay Techno Consultants",
+    date: "Jan 2022 — Jun 2022",
     description:
-      "Built and maintained .NET Web API services for client-facing applications. Developed Angular-based frontends, wrote unit tests, and actively participated in code reviews. Gained deep expertise in C#, MVC patterns, and relational database design.",
-    tech: ["C#", ".NET Framework", "Angular", "SQL Server", "Web API"],
-  },
-  {
-    role: "Software Engineering Intern",
-    company: "Tech Startup",
-    date: "2019 — 2020",
-    description:
-      "Contributed to an ASP.NET MVC project during internship, building CRUD modules and integrating third-party APIs. Learned software development best practices including version control with Git, agile workflows, and test-driven development.",
-    tech: ["ASP.NET MVC", "JavaScript", "SQL Server", "Git", "Bootstrap"],
+      "Contributed to real-world enterprise .NET projects during a 6-month internship. Built CRUD modules using ASP.NET MVC, developed database-driven features with Entity Framework and SQL Server, and wrote clean, maintainable C# code under senior developer guidance. Rapidly onboarded to the team's development workflow and agile processes.",
+    tech: ["ASP.NET MVC", "C#", "SQL Server", "Entity Framework", "JavaScript", "Bootstrap"],
+    achievements: [],
   },
 ];
 
@@ -46,10 +45,9 @@ export function Experience() {
           <div className="w-20 h-1 bg-secondary rounded-full" />
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-0 md:left-[11.5rem] top-3 bottom-3 w-px bg-gradient-to-b from-primary/40 via-border to-transparent hidden md:block" />
+          {/* Timeline line */}
+          <div className="absolute left-0 md:left-[12rem] top-3 bottom-3 w-px bg-gradient-to-b from-primary/40 via-border to-transparent hidden md:block" />
 
           <div className="space-y-10">
             {EXPERIENCES.map((exp, index) => (
@@ -61,17 +59,15 @@ export function Experience() {
                 transition={{ duration: 0.6, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative pl-8 md:pl-0"
               >
-                {/* Mobile timeline line */}
-                <div className="md:hidden absolute left-[9px] top-4 bottom-[-40px] w-px bg-border last:bg-transparent" />
-
+                <div className="md:hidden absolute left-[9px] top-4 bottom-[-40px] w-px bg-border" />
                 <div className="grid grid-cols-1 md:grid-cols-[12rem_auto] gap-4 md:gap-10 relative">
                   {/* Timeline dot — desktop */}
-                  <div className="absolute left-[-32px] md:left-auto md:right-[-1.25rem] top-[1.35rem] w-2.5 h-2.5 rounded-full bg-primary/80 z-10 hidden md:block shadow-[0_0_8px_rgba(140,90,255,0.7)]" />
+                  <div className="absolute left-[-32px] md:right-[-1.25rem] top-[1.6rem] w-3 h-3 rounded-full bg-primary z-10 hidden md:block shadow-[0_0_10px_rgba(140,90,255,0.8)]" />
                   {/* Timeline dot — mobile */}
-                  <div className="absolute left-[5px] top-[1.35rem] w-2.5 h-2.5 rounded-full bg-primary/80 z-10 md:hidden" />
+                  <div className="absolute left-[5px] top-[1.35rem] w-2.5 h-2.5 rounded-full bg-primary z-10 md:hidden" />
 
                   {/* Date */}
-                  <div className="text-muted-foreground font-mono text-sm pt-5 md:text-right pr-6 flex-shrink-0">
+                  <div className="text-muted-foreground font-mono text-xs pt-5 md:text-right pr-6 flex-shrink-0 leading-tight">
                     {exp.date}
                   </div>
 
@@ -80,15 +76,22 @@ export function Experience() {
                     whileHover={shouldReduceMotion ? {} : { y: -3, transition: { duration: 0.2 } }}
                     className="glass-panel p-6 md:p-8 rounded-2xl border border-white/5 hover:border-primary/20 transition-colors duration-300 shadow-lg hover:shadow-primary/10"
                   >
-                    <h3 className="text-lg font-bold text-foreground mb-1">
-                      {exp.role}
-                    </h3>
-                    <div className="text-primary font-medium text-sm mb-4">
-                      {exp.company}
-                    </div>
-                    <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
-                      {exp.description}
-                    </p>
+                    <h3 className="text-lg font-bold text-foreground mb-0.5">{exp.role}</h3>
+                    <div className="text-primary font-medium text-sm mb-4">{exp.company}</div>
+                    <p className="text-muted-foreground text-sm mb-5 leading-relaxed">{exp.description}</p>
+
+                    {/* Achievement highlights */}
+                    {exp.achievements.length > 0 && (
+                      <div className="flex flex-wrap gap-3 mb-5">
+                        {exp.achievements.map(({ icon: Icon, text }) => (
+                          <div key={text} className="flex items-center gap-1.5 text-xs text-emerald-400/90 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                            <Icon className="w-3 h-3" />
+                            {text}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
                     <div className="flex flex-wrap gap-2">
                       {exp.tech.map((t) => (
                         <span

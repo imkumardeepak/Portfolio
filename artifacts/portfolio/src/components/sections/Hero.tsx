@@ -1,15 +1,16 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroGlobe } from "./HeroGlobe";
 
 const SOCIAL_LINKS = [
-  { href: "https://github.com/deepakkumar", icon: Github, label: "GitHub" },
-  { href: "https://linkedin.com/in/deepakkumar", icon: Linkedin, label: "LinkedIn" },
-  { href: "mailto:deepak@example.com", icon: Mail, label: "Email" },
+  { href: "https://github.com/deepakverma", icon: Github, label: "GitHub" },
+  { href: "https://linkedin.com/in/deepakverma", icon: Linkedin, label: "LinkedIn" },
+  { href: "mailto:amikumardeepak@gmail.com", icon: Mail, label: "Email" },
+  { href: "tel:+918409671140", icon: Phone, label: "Phone" },
 ];
 
-const TECH_BADGES = [".NET Core", "C#", "React", "SQL Server", "Azure"];
+const TECH_BADGES = [".NET Core", "C#", "React.js", "SQL Server", "Azure", "Microservices"];
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -25,12 +26,12 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-6 overflow-hidden"
     >
-      {/* 3D Globe canvas — full section background */}
+      {/* 3D Globe canvas */}
       <div className="absolute inset-0 z-0">
         <HeroGlobe />
       </div>
 
-      {/* Vignette to blend globe into the dark background */}
+      {/* Vignette */}
       <div
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
@@ -38,7 +39,6 @@ export function Hero() {
             "radial-gradient(ellipse 55% 100% at 70% 50%, transparent 30%, hsl(250,38%,3%) 75%)",
         }}
       />
-      {/* Bottom fade */}
       <div
         className="absolute bottom-0 left-0 right-0 h-48 z-[1] pointer-events-none"
         style={{
@@ -69,15 +69,15 @@ export function Hero() {
               {...fadeUp(0.18)}
               className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter"
             >
-              Deepak Kumar
+              Deepak Verma
             </motion.h1>
 
             <motion.h2
               {...fadeUp(0.28)}
               className="text-xl md:text-3xl font-medium text-muted-foreground max-w-xl"
             >
-              .NET Full Stack Developer &{" "}
-              <span className="text-foreground font-semibold">Software Engineer</span>
+              Full Stack Developer &{" "}
+              <span className="text-foreground font-semibold">.NET Engineer</span>
             </motion.h2>
           </div>
 
@@ -86,16 +86,13 @@ export function Hero() {
             {...fadeUp(0.38)}
             className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed"
           >
-            I build robust, scalable enterprise applications using the .NET ecosystem.
-            Passionate about clean architecture, efficient APIs, and delivering
-            high-quality software solutions from frontend to backend.
+            3+ years building enterprise-grade applications with the .NET ecosystem.
+            Specialized in high-performance APIs, microservices, and full-stack solutions
+            that scale — from SQL Server databases to React frontends.
           </motion.p>
 
           {/* Tech badges */}
-          <motion.div
-            {...fadeUp(0.46)}
-            className="flex flex-wrap gap-2"
-          >
+          <motion.div {...fadeUp(0.46)} className="flex flex-wrap gap-2">
             {TECH_BADGES.map((badge) => (
               <span
                 key={badge}
