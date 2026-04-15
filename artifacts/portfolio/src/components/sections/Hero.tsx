@@ -3,6 +3,8 @@ import { ArrowRight, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroGlobe } from "./HeroGlobe";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const SOCIAL_LINKS = [
   { href: "https://github.com/imkumardeepak", icon: Github, label: "GitHub" },
   { href: "https://www.linkedin.com/in/amikumardeepak/", icon: Linkedin, label: "LinkedIn" },
@@ -18,7 +20,7 @@ export function Hero() {
   const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, delay, ease: EASE },
   });
 
   return (

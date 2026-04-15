@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Monitor, Server, Database, Wrench } from "lucide-react";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const SKILL_GROUPS = [
   {
     icon: Server,
@@ -76,7 +78,7 @@ export function Skills() {
           initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mb-16 text-center"
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
@@ -94,7 +96,7 @@ export function Skills() {
               initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: gi * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: gi * 0.08, ease: EASE }}
               whileHover={shouldReduceMotion ? {} : { y: -6, transition: { duration: 0.25 } }}
               className="glass-panel p-6 rounded-2xl relative overflow-hidden group cursor-default border border-white/5 hover:border-primary/20 transition-colors duration-300"
             >

@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Code2, Layers, Zap } from "lucide-react";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const HIGHLIGHTS = [
   { icon: Code2, label: "3+ Years", desc: "Enterprise .NET development" },
   { icon: Layers, label: "Full Stack", desc: "ASP.NET Core to React frontends" },
@@ -21,7 +23,7 @@ export function About() {
     initial: { opacity: 0, y: shouldReduceMotion ? 0 : 32 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: "-80px" },
-    transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.65, delay, ease: EASE },
   });
 
   return (

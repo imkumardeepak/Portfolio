@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const PROJECTS = [
   {
     title: "Milk Bakery Order Management",
@@ -63,7 +65,7 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
       initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.7, ease: EASE }}
       className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
     >
       {/* Image */}
@@ -142,7 +144,7 @@ export function Projects() {
           initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mb-20 flex items-center gap-6"
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight whitespace-nowrap">

@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { TrendingUp, Users, Zap } from "lucide-react";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const EXPERIENCES = [
   {
     role: "Full Stack Developer",
@@ -36,7 +38,7 @@ export function Experience() {
           initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-2">
@@ -56,7 +58,7 @@ export function Experience() {
                 initial={{ opacity: 0, x: shouldReduceMotion ? 0 : -24 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.6, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, delay: index * 0.12, ease: EASE }}
                 className="group relative pl-8 md:pl-0"
               >
                 <div className="md:hidden absolute left-[9px] top-4 bottom-[-40px] w-px bg-border" />

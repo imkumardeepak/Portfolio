@@ -6,6 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Send, Loader2, Mail, Phone, Github, Linkedin } from "lucide-react";
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 const CONTACT_INFO = [
   { icon: Mail, label: "Email", value: "amikumardeepak@gmail.com", href: "mailto:amikumardeepak@gmail.com" },
   { icon: Phone, label: "Phone", value: "+91 8409671140", href: "tel:+918409671140" },
@@ -38,7 +40,7 @@ export function Contact() {
           initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="text-center mb-16"
         >
           <div className="inline-block mb-4 px-4 py-1.5 rounded-full glass-panel border-primary/20 text-primary text-sm font-mono tracking-wide">
@@ -59,7 +61,7 @@ export function Contact() {
             initial={{ opacity: 0, x: shouldReduceMotion ? 0 : -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
             className="space-y-4"
           >
             <p className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-6">
@@ -92,7 +94,7 @@ export function Contact() {
             initial={{ opacity: 0, x: shouldReduceMotion ? 0 : 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.15, ease: EASE }}
             onSubmit={handleSubmit}
             className="space-y-5"
           >
