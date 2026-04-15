@@ -2,26 +2,29 @@ import { motion } from "framer-motion";
 
 const EXPERIENCES = [
   {
-    role: "Senior Frontend Engineer",
-    company: "Nexus Design",
-    date: "2021 — Present",
-    description: "Lead the frontend architecture for high-traffic e-commerce platforms. Mentored a team of 4 junior developers and improved site performance by 40%.",
-    tech: ["React", "TypeScript", "Next.js", "Tailwind"]
+    role: ".NET Full Stack Developer",
+    company: "Software Development Company",
+    date: "2022 — Present",
+    description:
+      "Designing and developing enterprise-grade web applications using ASP.NET Core and React. Lead backend architecture decisions, implement RESTful APIs, and manage SQL Server databases. Collaborate closely with product and design teams to deliver clean, performant solutions.",
+    tech: ["ASP.NET Core", "React", "SQL Server", "Azure", "Entity Framework Core"],
   },
   {
-    role: "Full-Stack Developer",
-    company: "Orbit Studios",
-    date: "2018 — 2021",
-    description: "Developed custom web applications for enterprise clients. Architected robust REST APIs and integrated multiple third-party services.",
-    tech: ["Node.js", "Express", "Vue", "PostgreSQL"]
+    role: "Junior .NET Developer",
+    company: "IT Solutions Firm",
+    date: "2020 — 2022",
+    description:
+      "Built and maintained .NET Web API services for client-facing applications. Developed Angular-based frontends, wrote unit tests, and actively participated in code reviews. Gained deep expertise in C#, MVC patterns, and relational database design.",
+    tech: ["C#", ".NET Framework", "Angular", "SQL Server", "Web API"],
   },
   {
-    role: "UI/UX Developer",
-    company: "Creative Form",
-    date: "2016 — 2018",
-    description: "Bridged the gap between design and engineering. Created interactive prototypes and implemented complex CSS animations for marketing sites.",
-    tech: ["JavaScript", "Sass", "Figma", "GSAP"]
-  }
+    role: "Software Engineering Intern",
+    company: "Tech Startup",
+    date: "2019 — 2020",
+    description:
+      "Contributed to an ASP.NET MVC project during internship, building CRUD modules and integrating third-party APIs. Learned software development best practices including version control with Git, agile workflows, and test-driven development.",
+    tech: ["ASP.NET MVC", "JavaScript", "SQL Server", "Git", "Bootstrap"],
+  },
 ];
 
 export function Experience() {
@@ -51,17 +54,15 @@ export function Experience() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative pl-8 md:pl-0"
             >
-              {/* Timeline line - mobile only */}
               <div className="md:hidden absolute left-[11px] top-2 bottom-[-48px] w-[2px] bg-border group-last:bg-transparent" />
-              
+
               <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-4 md:gap-8 relative">
-                {/* Timeline dot */}
                 <div className="absolute left-[-32px] md:left-auto md:-right-4 top-1.5 w-6 h-6 rounded-full bg-background border-4 border-muted z-10 md:hidden" />
-                
+
                 <div className="text-muted-foreground font-mono text-sm pt-1">
                   {exp.date}
                 </div>
-                
+
                 <div className="glass-panel p-6 md:p-8 rounded-2xl hover:bg-white/[0.04] transition-colors">
                   <h3 className="text-xl font-bold text-foreground mb-1">
                     {exp.role}
@@ -69,15 +70,15 @@ export function Experience() {
                   <div className="text-primary font-medium mb-4">
                     {exp.company}
                   </div>
-                  
+
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {exp.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {exp.tech.map((t, i) => (
-                      <span 
-                        key={i} 
+                      <span
+                        key={i}
                         className="px-3 py-1 text-xs font-mono rounded-full bg-primary/10 text-primary border border-primary/20"
                       >
                         {t}

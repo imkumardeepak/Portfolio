@@ -13,13 +13,12 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate network request
+
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
         title: "Message sent successfully!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+        description: "Thanks for reaching out. Deepak will get back to you soon.",
       });
       (e.target as HTMLFormElement).reset();
     }, 1500);
@@ -41,33 +40,62 @@ export function Contact() {
             Get In Touch
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-12 leading-relaxed">
-            Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            I'm open to new opportunities, freelance projects, and collaborations. Whether you have a project in mind or just want to connect, feel free to drop a message — I'll get back to you as soon as possible!
           </p>
 
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6 text-left">
+          <form
+            onSubmit={handleSubmit}
+            className="max-w-md mx-auto space-y-6 text-left"
+          >
             <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
-              <Input id="name" required placeholder="John Doe" className="bg-background/50 border-white/10 focus-visible:ring-primary" />
-            </div>
-            
-            <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-foreground">Email</label>
-              <Input id="email" type="email" required placeholder="john@example.com" className="bg-background/50 border-white/10 focus-visible:ring-primary" />
-            </div>
-            
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium text-foreground">Message</label>
-              <Textarea 
-                id="message" 
-                required 
-                placeholder="Hello Alex..." 
-                className="min-h-[150px] bg-background/50 border-white/10 focus-visible:ring-primary resize-y" 
+              <label
+                htmlFor="name"
+                className="text-sm font-medium text-foreground"
+              >
+                Name
+              </label>
+              <Input
+                id="name"
+                required
+                placeholder="Your name"
+                className="bg-background/50 border-white/10 focus-visible:ring-primary"
               />
             </div>
-            
-            <Button 
-              type="submit" 
-              size="lg" 
+
+            <div className="space-y-2">
+              <label
+                htmlFor="email"
+                className="text-sm font-medium text-foreground"
+              >
+                Email
+              </label>
+              <Input
+                id="email"
+                type="email"
+                required
+                placeholder="your@email.com"
+                className="bg-background/50 border-white/10 focus-visible:ring-primary"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label
+                htmlFor="message"
+                className="text-sm font-medium text-foreground"
+              >
+                Message
+              </label>
+              <Textarea
+                id="message"
+                required
+                placeholder="Hello Deepak..."
+                className="min-h-[150px] bg-background/50 border-white/10 focus-visible:ring-primary resize-y"
+              />
+            </div>
+
+            <Button
+              type="submit"
+              size="lg"
               disabled={isSubmitting}
               className="w-full rounded-xl gap-2 font-medium"
             >

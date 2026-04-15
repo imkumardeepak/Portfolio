@@ -1,51 +1,60 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-import { useRef } from "react";
 
 const PROJECTS = [
   {
-    title: "NovaPulse",
-    type: "Featured Project",
-    description: "A real-time analytics dashboard built with WebSockets and complex data visualization. Allows users to monitor network traffic, identify anomalies, and generate automated reports with zero latency.",
-    tech: ["React", "D3.js", "Node.js", "Socket.io"],
+    title: "Enterprise HR Management System",
+    type: "Full Stack .NET Application",
+    description:
+      "A comprehensive HR management platform built with ASP.NET Core and React. Features employee onboarding workflows, leave management, payroll processing, and role-based access control. Backed by SQL Server with Entity Framework Core for robust data management.",
+    tech: ["ASP.NET Core", "React", "SQL Server", "Entity Framework", "Azure AD"],
     image: "/project-1.png",
     github: "#",
-    live: "#"
+    live: "#",
   },
   {
-    title: "Verdant",
-    type: "Mobile Web App",
-    description: "A smart plant care application that uses machine learning to identify plant species and recommend tailored watering schedules. Features a rich interactive calendar and push notifications.",
-    tech: ["TypeScript", "Next.js", "Tailwind", "TensorFlow.js"],
+    title: "Real-Time Order Tracking API",
+    type: "Backend .NET Microservice",
+    description:
+      "A high-performance microservice for real-time order lifecycle tracking using ASP.NET Core Web API and SignalR. Supports push notifications, live status updates across clients, and integrates with third-party logistics APIs. Deployed on Azure App Service.",
+    tech: ["ASP.NET Core", "SignalR", "Azure Service Bus", "SQL Server", "Docker"],
     image: "/project-2.png",
     github: "#",
-    live: "#"
+    live: "#",
   },
   {
-    title: "Orbit",
-    type: "Featured Project",
-    description: "A collaborative multiplayer whiteboard tool designed for remote design teams. Features real-time cursor tracking, shape operations, and a completely custom canvas rendering engine.",
-    tech: ["React", "Canvas API", "Yjs", "Redis"],
+    title: "E-Commerce Platform",
+    type: "Full Stack Web Application",
+    description:
+      "A full-featured e-commerce solution with product catalog, shopping cart, Stripe payment integration, and an Angular-based admin dashboard. Built on .NET Web API with a clean layered architecture — repository pattern, services layer, and DTOs for clean separation of concerns.",
+    tech: ["ASP.NET Core", "Angular", "Stripe API", "PostgreSQL", "Entity Framework"],
     image: "/project-3.png",
     github: "#",
-    live: "#"
+    live: "#",
   },
   {
-    title: "Aurora",
-    type: "Web Application",
-    description: "A creative platform for generative artists to share and remix shader code. Includes a live in-browser WebGL editor, user profiles, and a trending gallery algorithm.",
-    tech: ["Three.js", "Vue", "Express", "MongoDB"],
+    title: "Inventory & Warehouse Management",
+    type: "Enterprise Desktop + Web App",
+    description:
+      "An end-to-end warehouse management system for tracking stock levels, purchase orders, and supplier relationships. Features barcode scanning support, automated low-stock alerts, and detailed reporting dashboards built with Blazor and Chart.js.",
+    tech: ["Blazor", "C#", ".NET", "SQL Server", "REST APIs"],
     image: "/project-4.png",
     github: "#",
-    live: "#"
-  }
+    live: "#",
+  },
 ];
 
-function ProjectCard({ project, index }: { project: typeof PROJECTS[0], index: number }) {
+function ProjectCard({
+  project,
+  index,
+}: {
+  project: (typeof PROJECTS)[0];
+  index: number;
+}) {
   const isEven = index % 2 === 0;
-  
+
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -53,11 +62,13 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0], index: n
       className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
     >
       {/* Image container */}
-      <div className={`relative z-10 lg:col-span-7 ${isEven ? 'lg:col-start-1' : 'lg:col-start-6'} group`}>
+      <div
+        className={`relative z-10 lg:col-span-7 ${isEven ? "lg:col-start-1" : "lg:col-start-6"} group`}
+      >
         <div className="relative aspect-video rounded-xl overflow-hidden glass-panel">
           <div className="absolute inset-0 bg-primary/20 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500 z-10" />
-          <img 
-            src={project.image} 
+          <img
+            src={project.image}
             alt={project.title}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
@@ -65,30 +76,42 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0], index: n
       </div>
 
       {/* Content container */}
-      <div className={`relative z-20 lg:col-span-6 flex flex-col justify-center ${isEven ? 'lg:col-start-7 lg:text-right' : 'lg:col-start-1 lg:text-left'} text-left mt-8 lg:mt-0`}>
+      <div
+        className={`relative z-20 lg:col-span-6 flex flex-col justify-center ${isEven ? "lg:col-start-7 lg:text-right" : "lg:col-start-1 lg:text-left"} text-left mt-8 lg:mt-0`}
+      >
         <p className="text-primary font-mono text-sm mb-2">{project.type}</p>
         <h3 className="text-2xl md:text-3xl font-bold mb-6 hover:text-primary transition-colors cursor-pointer inline-block">
           {project.title}
         </h3>
-        
+
         <div className="glass-panel p-6 rounded-xl mb-6 shadow-xl z-20 relative">
           <p className="text-muted-foreground leading-relaxed">
             {project.description}
           </p>
         </div>
 
-        <ul className={`flex flex-wrap gap-4 text-sm font-mono text-muted-foreground mb-8 ${isEven ? 'lg:justify-end' : 'lg:justify-start'}`}>
-          {project.tech.map(tech => (
+        <ul
+          className={`flex flex-wrap gap-4 text-sm font-mono text-muted-foreground mb-8 ${isEven ? "lg:justify-end" : "lg:justify-start"}`}
+        >
+          {project.tech.map((tech) => (
             <li key={tech}>{tech}</li>
           ))}
         </ul>
 
-        <div className={`flex items-center gap-4 ${isEven ? 'lg:justify-end' : 'lg:justify-start'}`}>
-          <a href={project.github} className="text-muted-foreground hover:text-primary transition-colors p-2 -m-2">
+        <div
+          className={`flex items-center gap-4 ${isEven ? "lg:justify-end" : "lg:justify-start"}`}
+        >
+          <a
+            href={project.github}
+            className="text-muted-foreground hover:text-primary transition-colors p-2 -m-2"
+          >
             <Github className="w-5 h-5" />
             <span className="sr-only">GitHub</span>
           </a>
-          <a href={project.live} className="text-muted-foreground hover:text-primary transition-colors p-2 -m-2">
+          <a
+            href={project.live}
+            className="text-muted-foreground hover:text-primary transition-colors p-2 -m-2"
+          >
             <ExternalLink className="w-5 h-5" />
             <span className="sr-only">Live Demo</span>
           </a>

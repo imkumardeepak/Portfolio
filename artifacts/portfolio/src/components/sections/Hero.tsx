@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Twitter, Linkedin } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -26,16 +26,17 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-balance"
             >
-              Alex Rivera
+              Deepak Kumar
             </motion.h1>
-            
+
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-2xl md:text-4xl font-medium text-muted-foreground max-w-3xl text-balance"
             >
-              Full-Stack Developer & <span className="text-foreground">Creative Technologist</span>
+              .NET Full Stack Developer &{" "}
+              <span className="text-foreground">Software Engineer</span>
             </motion.h2>
           </div>
 
@@ -45,8 +46,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-lg text-muted-foreground max-w-2xl leading-relaxed"
           >
-            I build exceptional digital experiences at the intersection of design and engineering. 
-            Focused on crafting accessible, human-centered products with uncompromising attention to detail.
+            I build robust, scalable enterprise applications using the .NET ecosystem. 
+            Passionate about clean architecture, efficient APIs, and delivering high-quality software solutions from frontend to backend.
           </motion.p>
 
           <motion.div
@@ -61,19 +62,19 @@ export function Hero() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            
+
             <div className="flex items-center gap-6">
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://github.com/deepakkumar" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <span className="sr-only">GitHub</span>
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <span className="sr-only">Twitter</span>
-                <Twitter className="w-6 h-6" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://linkedin.com/in/deepakkumar" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="mailto:deepak@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+                <span className="sr-only">Email</span>
+                <Mail className="w-6 h-6" />
               </a>
             </div>
           </motion.div>
