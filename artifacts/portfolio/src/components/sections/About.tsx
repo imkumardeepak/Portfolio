@@ -39,14 +39,38 @@ export function About() {
               <motion.div
                 whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="aspect-square overflow-hidden rounded-2xl bg-muted relative z-10 border border-white/10 shadow-2xl shadow-primary/10"
+                className="relative z-10 overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.18),_rgba(255,255,255,0.02)_45%),linear-gradient(160deg,_rgba(14,165,233,0.16),_rgba(249,115,22,0.12)_55%,_rgba(15,23,42,0.92))] px-6 pb-6 pt-8 shadow-2xl shadow-primary/10"
               >
-                <img
-                  src="/avatar.png"
-                  alt="Deepak Verma"
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
+                <div className="absolute -left-10 top-6 h-24 w-24 rounded-full bg-sky-400/20 blur-2xl transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute -right-6 bottom-10 h-28 w-28 rounded-full bg-orange-400/20 blur-2xl transition-transform duration-700 group-hover:scale-110" />
+                <motion.div
+                  animate={shouldReduceMotion ? {} : { y: [0, -6, 0], rotate: [0, -2, 0] }}
+                  transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute right-5 top-5 rounded-full rounded-bl-md border border-white/40 bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-lg"
+                >
+                  Hi!
+                </motion.div>
+
+                <div className="relative mx-auto flex min-h-[22rem] items-end justify-center">
+                  <div className="absolute bottom-0 h-40 w-40 rounded-full bg-slate-950/30 blur-2xl" />
+                  <div className="absolute bottom-5 h-44 w-[72%] rounded-[999px] bg-white/10 blur-xl" />
+
+                  <motion.div
+                    whileHover={shouldReduceMotion ? {} : { y: -6, rotate: -1.5 }}
+                    transition={{ duration: 0.45, ease: "easeOut" }}
+                    className="relative w-full max-w-[18rem]"
+                  >
+                    <div className="absolute inset-3 rounded-[2rem] bg-white/15 blur-xl" />
+                    <div className="relative overflow-hidden rounded-[2rem] border-4 border-white/60 bg-white/10 shadow-[0_24px_60px_rgba(15,23,42,0.35)]">
+                      <img
+                        src="/avatar.png"
+                        alt="Deepak Verma"
+                        className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950/35 via-slate-950/10 to-transparent" />
+                    </div>
+                  </motion.div>
+                </div>
               </motion.div>
               <div className="absolute -inset-4 border border-primary/20 rounded-2xl -z-10 group-hover:rotate-3 transition-transform duration-500" />
               <div className="absolute -inset-4 border border-secondary/10 rounded-2xl -z-10 group-hover:-rotate-2 transition-transform duration-500 delay-75" />
