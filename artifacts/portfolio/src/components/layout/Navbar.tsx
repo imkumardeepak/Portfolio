@@ -74,9 +74,13 @@ export function Navbar() {
         <a
           href="#about"
           onClick={(e) => handleClick(e, "#about")}
-          className="md:hidden rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm font-semibold tracking-[0.18em] text-foreground/90 backdrop-blur-md"
+          className="md:hidden overflow-hidden rounded-full border border-white/15 bg-black/20 p-1 shadow-lg shadow-black/20 backdrop-blur-md transition-transform duration-300 hover:scale-105"
         >
-          DV
+          <img
+            src="/about-bitmoji.png"
+            alt="Deepak Verma bitmoji"
+            className="h-10 w-10 rounded-full object-cover"
+          />
         </a>
 
         <nav className={cn(
