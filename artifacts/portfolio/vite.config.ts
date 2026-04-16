@@ -6,27 +6,27 @@ import path from "path";
 const isReplit = process.env.REPL_ID !== undefined;
 const isProduction = process.env.NODE_ENV === "production";
 
-// PORT is only needed for the dev server — not required during a production build
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
-
-// On Replit the workspace router sets BASE_PATH; everywhere else (Vercel, local) use "/"
 const basePath = process.env.BASE_PATH ?? "/";
+
+async function getReplitPlugins() {
+  if (isProduction || !isReplit) return [];
+  try {
+    const [errorModal, cartographer] = await Promise.all([
+      import("@replit/vite-plugin-runtime-error-modal").then((m) => m.default()),
+      import("@replit/vite-plugin-cartographer").then((m) =>
+        m.cartographer({ root: path.resolve(import.meta.dirname, "..") }),
+      ),
+    ]);
+    return [errorModal, cartographer];
+  } catch {
+    return [];
+  }
+}
 
 export default defineConfig({
   base: basePath,
-  plugins: [
-    react(),
-    tailwindcss(),
-    // Replit-only dev plugins
-    ...(!isProduction && isReplit
-      ? [
-          (await import("@replit/vite-plugin-runtime-error-modal")).default(),
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer({ root: path.resolve(import.meta.dirname, "..") }),
-          ),
-        ]
-      : []),
-  ],
+  plugins: [react(), tailwindcss(), ...(await getReplitPlugins())],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
