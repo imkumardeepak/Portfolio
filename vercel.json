@@ -1,9 +1,9 @@
 {
-  "installCommand": "cd artifacts/portfolio && npm install",
-  "buildCommand": "cd artifacts/portfolio && npm run build",
+  "buildCommand": "pnpm --filter @workspace/portfolio run build",
   "outputDirectory": "artifacts/portfolio/dist",
-  "framework": null,
+  "framework": "vite",
   "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
