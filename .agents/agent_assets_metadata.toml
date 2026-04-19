@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "5ba4dC6TZrYV8EJJN9NtL"
@@ -36,3 +35,9 @@ id = "K6GO6MSSWg9Q1NqQAPQZa"
 uri = "file://attached_assets/generated_images/generated_image.png"
 type = "image"
 title = "generated_image"
+
+[[outputs]]
+id = "F3PyHBH8yOOuzoZG52zb5"
+uri = "file://README.md"
+type = "text"
+title = "Portfolio README.md"
