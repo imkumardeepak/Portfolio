@@ -1,16 +1,17 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Code2, Layers, Zap } from "lucide-react";
+import { yearsLabel, getYearsOfExperience } from "@/lib/experience";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const HIGHLIGHTS = [
-  { icon: Code2, label: "3+ Years", desc: "Enterprise .NET development" },
+  { icon: Code2, label: `${yearsLabel()} Years`, desc: "Enterprise .NET development" },
   { icon: Layers, label: "Full Stack", desc: "ASP.NET Core to React frontends" },
   { icon: Zap, label: "Performance", desc: "30% API speed improvement" },
 ];
 
 const STATS = [
-  { value: "3+", label: "Years Experience" },
+  { value: yearsLabel(), label: "Years Experience" },
   { value: "1K+", label: "Daily Transactions" },
   { value: "30%", label: "API Performance Gain" },
   { value: "5+", label: "Enterprise Projects" },
@@ -92,7 +93,7 @@ export function About() {
 
             <motion.div {...inView(0.18)} className="space-y-5 text-base md:text-lg text-muted-foreground">
               <p>
-                Hi! I'm <span className="text-foreground font-medium">Deepak Verma</span>, a Full Stack Developer with 3+ years of professional experience building enterprise-grade applications on the Microsoft technology stack.
+                Hi! I'm <span className="text-foreground font-medium">Deepak Verma</span>, a Full Stack Developer with {getYearsOfExperience()}+ years of professional experience building enterprise-grade applications on the Microsoft technology stack.
               </p>
               <p>
                 At <span className="text-foreground font-medium">Aarkay Techno Consultants</span>, I've architected and delivered mission-critical systems handling 1,000+ daily transactions. My focus on performance optimization led to a <span className="text-primary font-medium">30% improvement in API response times</span>, directly impacting user satisfaction and business efficiency.

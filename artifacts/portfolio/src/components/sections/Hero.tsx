@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroGlobe } from "./HeroGlobe";
+import { yearsLabel } from "@/lib/experience";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -88,7 +89,7 @@ export function Hero() {
             {...fadeUp(0.38)}
             className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed"
           >
-            3+ years building enterprise-grade applications with the .NET ecosystem.
+            {yearsLabel()} years building enterprise-grade applications with the .NET ecosystem.
             Specialized in high-performance APIs, microservices, and full-stack solutions
             that scale — from SQL Server databases to React frontends.
           </motion.p>
