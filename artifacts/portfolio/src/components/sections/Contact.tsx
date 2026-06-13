@@ -16,23 +16,58 @@ const CONTACT_INFO = [
 ];
 
 const AVAILABILITY = "Open to relocation anywhere in India | Remote / Hybrid / On-site";
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 export function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const shouldReduceMotion = useReducedMotion();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+
+    if (!WEB3FORMS_ACCESS_KEY) {
       setIsSubmitting(false);
+      toast({
+        title: "Message not sent",
+        description: "Contact form is missing the Web3Forms access key.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("subject", "New portfolio contact message");
+    formData.append("from_name", "Deepak Verma Portfolio");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = (await response.json()) as { success?: boolean; message?: string };
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message ?? "Unable to submit the contact form.");
+      }
+
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out. Deepak will get back to you soon.",
       });
-      (e.target as HTMLFormElement).reset();
-    }, 1500);
+      form.reset();
+    } catch {
+      toast({
+        title: "Message not sent",
+        description: "Please try again or email Deepak directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -105,6 +140,7 @@ export function Contact() {
               <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
               <Input
                 id="name"
+                name="name"
                 required
                 placeholder="Your name"
                 className="bg-background/50 border-white/10 focus-visible:ring-primary"
@@ -115,6 +151,7 @@ export function Contact() {
               <label htmlFor="email" className="text-sm font-medium text-foreground">Email</label>
               <Input
                 id="email"
+                name="email"
                 type="email"
                 required
                 placeholder="your@email.com"
@@ -126,6 +163,7 @@ export function Contact() {
               <label htmlFor="message" className="text-sm font-medium text-foreground">Message</label>
               <Textarea
                 id="message"
+                name="message"
                 required
                 placeholder="Hello Deepak, I'd like to discuss..."
                 className="min-h-[150px] bg-background/50 border-white/10 focus-visible:ring-primary resize-y"
