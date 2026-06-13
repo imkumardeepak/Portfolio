@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Monitor, Server, Database, Wrench } from "lucide-react";
+import { yearsLabel } from "@/lib/experience";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -107,7 +108,7 @@ export function Skills() {
             Technical Arsenal.
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            A comprehensive stack built over 4+ years of enterprise development - from secure .NET APIs to industrial automation and modern frontend systems.
+            A comprehensive stack built over {yearsLabel()} years of enterprise development — from .NET microservices to modern frontend frameworks.
           </p>
         </motion.div>
 
