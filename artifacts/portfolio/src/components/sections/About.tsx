@@ -4,16 +4,16 @@ import { ArrowUpRight, Code2, Layers, Zap } from "lucide-react";
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const HIGHLIGHTS = [
-  { icon: Code2, label: "3+ Years", desc: "Enterprise .NET development" },
+  { icon: Code2, label: "4+ Years", desc: "Enterprise .NET development" },
   { icon: Layers, label: "Full Stack", desc: "ASP.NET Core to React frontends" },
   { icon: Zap, label: "Performance", desc: "30% API speed improvement" },
 ];
 
 const STATS = [
-  { value: "3+", label: "Years Experience" },
+  { value: "4+", label: "Years Experience" },
   { value: "1K+", label: "Daily Transactions" },
   { value: "30%", label: "API Performance Gain" },
-  { value: "5+", label: "Enterprise Projects" },
+  { value: "40%", label: "Manual Effort Reduced" },
 ];
 
 export function About() {
@@ -92,13 +92,13 @@ export function About() {
 
             <motion.div {...inView(0.18)} className="space-y-5 text-base md:text-lg text-muted-foreground">
               <p>
-                Hi! I'm <span className="text-foreground font-medium">Deepak Verma</span>, a Full Stack Developer with 3+ years of professional experience building enterprise-grade applications on the Microsoft technology stack.
+                Hi! I'm <span className="text-foreground font-medium">Deepak Verma</span>, a Senior Full Stack .NET Developer with 4+ years of professional experience building enterprise-grade applications on the Microsoft technology stack.
               </p>
               <p>
-                At <span className="text-foreground font-medium">Aarkay Techno Consultants</span>, I've architected and delivered mission-critical systems handling 1,000+ daily transactions. My focus on performance optimization led to a <span className="text-primary font-medium">30% improvement in API response times</span>, directly impacting user satisfaction and business efficiency.
+                At <span className="text-foreground font-medium">Aarkay Techno Consultants</span>, I've delivered systems for manufacturing, FMCG, logistics, and industrial clients including <span className="text-foreground font-medium">Hindalco</span> and <span className="text-foreground font-medium">Haldiram's</span>. My work spans secure REST APIs, RFID workflows, vision scanners, industrial printers, and weighbridge automation.
               </p>
               <p>
-                I specialize in ASP.NET Core microservices, RESTful and GraphQL APIs, and full-stack delivery with React and Angular frontends. I also mentor junior developers and champion clean architecture principles across the team.
+                I specialize in ASP.NET Core, React.js, SQL Server, PostgreSQL, JWT/OAuth security, CI/CD, TCP/IP and RS-232 device communication, and clean architecture. I also mentor junior developers and help teams improve API design, Git workflows, and Agile delivery practices.
               </p>
             </motion.div>
 

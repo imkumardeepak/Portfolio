@@ -15,6 +15,8 @@ const CONTACT_INFO = [
   { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/amikumardeepak", href: "https://www.linkedin.com/in/amikumardeepak/" },
 ];
 
+const AVAILABILITY = "Open to relocation anywhere in India | Remote / Hybrid / On-site";
+
 export function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,9 +52,10 @@ export function Contact() {
             Let's build something together.
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            I'm open to new opportunities, freelance projects, and collaborations.
+            I'm open to senior .NET, full-stack, industrial automation, and enterprise application roles.
             Drop a message and I'll get back to you as soon as possible.
           </p>
+          <p className="mt-4 text-sm font-mono text-primary">{AVAILABILITY}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 items-start">

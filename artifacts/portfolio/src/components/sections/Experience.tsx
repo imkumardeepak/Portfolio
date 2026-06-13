@@ -5,25 +5,25 @@ const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const EXPERIENCES = [
   {
-    role: "Full Stack Developer",
-    company: "Aarkay Techno Consultants",
-    date: "Jul 2022 — Present",
+    role: "Full Stack .NET Developer",
+    company: "Aarkay Techno Consultants Pvt Ltd",
+    date: "Jul 2022 - Present",
     description:
-      "Lead the design and development of enterprise web applications handling 1,000+ daily business transactions. Architected scalable microservices using ASP.NET Core and delivered React/Angular frontends. Drove a 30% API performance improvement through query optimization and caching strategies. Mentor junior developers and conduct code reviews to maintain high code quality.",
-    tech: ["ASP.NET Core", "React.js", "SQL Server", "Microservices", "Entity Framework Core", "Docker"],
+      "Develop enterprise applications for manufacturing, logistics, and FMCG clients using ASP.NET Core, React.js, SQL Server, and PostgreSQL. Designed secure REST APIs with JWT, OAuth 2.0, and RBAC; improved performance by 30% through query optimization, caching, and backend refactoring; and built TCP/IP and RS-232 integrations for RFID, vision scanners, industrial printers, and weighbridge systems.",
+    tech: ["ASP.NET Core", "React.js", "SQL Server", "PostgreSQL", "EF Core", "Dapper", "SignalR", "Azure DevOps", "Docker", "JWT", "OAuth 2.0"],
     achievements: [
       { icon: Zap, text: "30% API performance improvement" },
-      { icon: TrendingUp, text: "1K+ daily transactions handled" },
+      { icon: TrendingUp, text: "30% fewer production defects" },
       { icon: Users, text: "Mentored junior developers" },
     ],
   },
   {
     role: ".NET Developer Intern",
-    company: "Aarkay Techno Consultants",
-    date: "Jan 2022 — Jun 2022",
+    company: "Aarkay Techno Consultants Pvt Ltd",
+    date: "Jan 2022 - Jun 2022",
     description:
-      "Contributed to real-world enterprise .NET projects during a 6-month internship. Built CRUD modules using ASP.NET MVC, developed database-driven features with Entity Framework and SQL Server, and wrote clean, maintainable C# code under senior developer guidance. Rapidly onboarded to the team's development workflow and agile processes.",
-    tech: ["ASP.NET MVC", "C#", "SQL Server", "Entity Framework", "JavaScript", "Bootstrap"],
+      "Developed CRUD applications using WinForms and ASP.NET, designed database structures, optimized stored procedures, implemented role-based access controls, and supported Agile testing and deployment activities.",
+    tech: ["WinForms", "ASP.NET", "C#", "SQL Server", "Stored Procedures", "RBAC", "Bootstrap"],
     achievements: [],
   },
 ];

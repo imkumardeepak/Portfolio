@@ -14,8 +14,10 @@ const SKILL_GROUPS = [
       "ASP.NET MVC",
       "Web API",
       "Entity Framework Core",
+      "Dapper",
       "LINQ",
       "Microservices",
+      "Minimal APIs",
       "GraphQL",
       "REST APIs",
       "WPF / Windows Forms",
@@ -32,10 +34,10 @@ const SKILL_GROUPS = [
       "TypeScript",
       "JavaScript (ES6+)",
       "Redux",
-      "Node.js",
       "HTML5 / CSS3",
       "Bootstrap",
       "Tailwind CSS",
+      "Responsive UI",
     ],
   },
   {
@@ -46,6 +48,7 @@ const SKILL_GROUPS = [
       "SQL Server",
       "PostgreSQL",
       "Oracle",
+      "ADO.NET",
       "MongoDB",
       "Entity Framework",
       "Stored Procedures",
@@ -54,16 +57,35 @@ const SKILL_GROUPS = [
   },
   {
     icon: Wrench,
-    title: "DevOps & Tools",
+    title: "Cloud & DevOps",
     color: "from-emerald-500/15 to-transparent",
     skills: [
-      "Docker",
-      "CI/CD Pipelines",
-      "Git & GitHub",
+      "Azure App Services",
+      "Azure DevOps",
+      "GitHub Actions",
       "Azure",
-      "Visual Studio",
-      "Postman",
-      "Swagger / OpenAPI",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "CI/CD Pipelines",
+    ],
+  },
+  {
+    icon: Wrench,
+    title: "Automation & Security",
+    color: "from-amber-500/15 to-transparent",
+    skills: [
+      "JWT Authentication",
+      "OAuth 2.0",
+      "RBAC",
+      "Azure AD B2C",
+      "TCP/IP Communication",
+      "RS-232 Communication",
+      "RFID Integration",
+      "Barcode Scanners",
+      "Vision Systems",
+      "Industrial Printers",
+      "Weighbridge Systems",
     ],
   },
 ];
@@ -85,11 +107,11 @@ export function Skills() {
             Technical Arsenal.
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            A comprehensive stack built over 3+ years of enterprise development — from .NET microservices to modern frontend frameworks.
+            A comprehensive stack built over 4+ years of enterprise development - from secure .NET APIs to industrial automation and modern frontend systems.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {SKILL_GROUPS.map((group, gi) => (
             <motion.div
               key={group.title}

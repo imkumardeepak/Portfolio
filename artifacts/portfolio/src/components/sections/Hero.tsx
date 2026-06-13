@@ -12,7 +12,15 @@ const SOCIAL_LINKS = [
   { href: "tel:+918409671140", icon: Phone, label: "Phone" },
 ];
 
-const TECH_BADGES = [".NET Core", "C#", "React.js", "SQL Server", "Azure", "Microservices"];
+const TECH_BADGES = [
+  "ASP.NET Core",
+  "React.js",
+  "C#",
+  "SQL Server",
+  "Azure DevOps",
+  "Industrial Automation",
+  "REST APIs",
+];
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -60,7 +68,7 @@ export function Hero() {
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
               </span>
               <span className="text-emerald-400 font-mono text-sm tracking-widest uppercase">
-                Available for new opportunities
+                Open to relocation across India
               </span>
             </div>
           </motion.div>
@@ -78,8 +86,8 @@ export function Hero() {
               {...fadeUp(0.28)}
               className="text-xl md:text-3xl font-medium text-muted-foreground max-w-xl"
             >
-              Full Stack Developer &{" "}
-              <span className="text-foreground font-semibold">.NET Engineer</span>
+              Senior Full Stack{" "}
+              <span className="text-foreground font-semibold">.NET Developer</span>
             </motion.h2>
           </div>
 
@@ -88,9 +96,9 @@ export function Hero() {
             {...fadeUp(0.38)}
             className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed"
           >
-            3+ years building enterprise-grade applications with the .NET ecosystem.
-            Specialized in high-performance APIs, microservices, and full-stack solutions
-            that scale — from SQL Server databases to React frontends.
+            4+ years designing enterprise web applications, industrial automation systems,
+            manufacturing workflows, and logistics platforms with ASP.NET Core, React.js,
+            SQL Server, PostgreSQL, secure APIs, and real-time device integration.
           </motion.p>
 
           {/* Tech badges */}
